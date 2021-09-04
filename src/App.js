@@ -1,6 +1,5 @@
-import { Button } from '@material-ui/core';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
 
 function App() {
 
@@ -10,10 +9,8 @@ function App() {
 
   return (
     <div className="App">
-
       <p>Hello</p>
-      <Button color="primary" onClick={test}>Hello World</Button>
-        
+      <button type="button" class="btn btn-primary btn-rounded" onClick={test}>Primary</button>
     </div>
   );
 }
