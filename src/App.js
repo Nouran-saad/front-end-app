@@ -6,6 +6,8 @@ import Login from './components/Login'
 import CreateAccount from './components/CreateAccount';
 import Trains from './components/Trains';
 import Payment from './components/Payment';
+import MoreInfo from './components/MoreInfo';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -27,10 +29,10 @@ function App() {
               <Trains />
             </Route>
             <Route exact path="/moreInfo">
-              <Trains />
+              <MoreInfo />
             </Route>
             <Route exact path="/profile">
-              <Trains />
+              <Profile />
             </Route>
             <Route exact path="/payment">
               <Payment />

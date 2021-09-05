@@ -4,12 +4,13 @@ import logo from './Trainss.jpg'
 import DatePicker from "react-datepicker";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-
 import "react-datepicker/dist/react-datepicker.css";
+import MyNav from "./MyNav";
 
 function Trains() {
 
   const [startDate, setStartDate] = useState(new Date());
+  const [startDate2, setStartDate2] = useState(new Date());
 
   const history = useHistory();
 
@@ -20,30 +21,7 @@ function Trains() {
 
   return (
     <div>
-      <Card style={{ color: "white", height: "100px" }}>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="/trains" style={{marginLeft:'1200px', fontSize:'25px'}}>
-                  Trains
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px'}}>
-                  More Info
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px'}}>
-                  Profile
-                </a>
-              </li>
-
-            </ul>
-          </div>
-        </nav>
-      </Card>
+      <MyNav/>
 
       <div style={{textAlign:'left', backgroundColor:'white', display:'flex', flexWrap:'wrap'}}>
 
@@ -69,9 +47,9 @@ function Trains() {
           </div>
           <div style={{display:'flex', flexWrap:'wrap',flexDirection:'row', marginLeft:'60px'}}>
             <label style={{marginRight:'20px' }}>Choose the date and time</label>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} showTimeSelect />
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} showTimeSelect  dateFormat="Pp" />
             <label style={{marginRight:'20px'}}>Return date</label>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} showTimeSelect />
+            <DatePicker selected={startDate2} onChange={(date2) => setStartDate2(date2)} showTimeSelect  dateFormat="Pp" />
           </div>
 
           <label style={{marginTop:'20px'}}>Number of passegers</label>
@@ -83,6 +61,7 @@ function Trains() {
           <button type="submit" class="btn btn-primary" onClick={routeChange} style={{marginTop:'30px',marginLeft:'120px', width:'120px'}}>
           Sign in
         </button>
+
         </Card>
 
 
