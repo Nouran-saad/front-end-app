@@ -8,6 +8,7 @@ import Trains from './components/Trains';
 import Payment from './components/Payment';
 import MoreInfo from './components/MoreInfo';
 import Profile from './components/Profile';
+import Ticket from './components/Ticket';
 
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route exact path="/payment">
               <Payment />
+            </Route>
+            <Route exact path="/ticket">
+              <Ticket />
             </Route>
           </Switch>
         </div>
