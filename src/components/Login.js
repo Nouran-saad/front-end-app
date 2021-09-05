@@ -13,7 +13,7 @@ function Login() {
   }
 
   return (
-    <form style={{marginLeft:'450px'}}>
+    <form style={{marginLeft:'480px'}}>
       <Card style={{backgroundColor:'lightskyblue',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
         <h2 style={{marginTop:'30px',marginBottom:'30px'}}>Log in</h2>
 
