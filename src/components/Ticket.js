@@ -1,62 +1,78 @@
 import React from 'react'
 import './ticket.css'
-import logo from './barcode.png'
+import logo from './qrcode.png'
 
 function Ticket() {
+
+	const routeChange = () =>{ 
+    alert('Done');
+  }
+
     return (
-        <section class="container">
-        <h1>Tickets</h1>
-          
-          <div class="row">
-            <article class="card fl-left">
-              <section class="date">
-								<img src={logo} alt="nouran" style={{width:'100px', height:'150px',flexDirection: 'row', marginTop:'4	0px'}}/>
-              </section>
-              <section class="card-cont">
-                <h2 style={{marginLeft:'90px'}}>Ticket Info</h2>
-                <h3 style={{marginLeft:'90px'}}>From : Cairo        To : Alexandria</h3>
-                <div class="even-date">
-                  <i class="fa fa-calendar"></i>
-                  <time >
-                    <span style={{marginLeft:'120px'}}>Date: 28 december 2014</span>
-                    <span style={{marginLeft:'120px'}}>Time: 08:55pm </span>
-                  </time>
+			<div class="page-content page-container" id="page-content" style={{marginTop:'100px'}}>
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-6 col-md-12">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src={logo} class="img-radius" alt="User-Profile-Image" style={{width:'160px'}}/> </div>
+                                <h6 class="f-w-600">Scan This QR Code</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">From</p>
+                                        <h6 class="text-muted f-w-400">Cairo</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">To</p>
+                                        <h6 class="text-muted f-w-400">Alexandria</h6>
+                                    </div>
+																		<br/>
+																		<br/>
+																		<br/>
+																		
+																		<div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Date</p>
+                                        <h6 class="text-muted f-w-400">25/05/2021</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Time</p>
+                                        <h6 class="text-muted f-w-400">22:00</h6>
+                                    </div>
+																		<br/>
+																		<br/>
+																		<br/>
+																		<div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Train Number</p>
+                                        <h6 class="text-muted f-w-400">903</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Seat Number</p>
+                                        <h6 class="text-muted f-w-400">55</h6>
+                                    </div>
+																		<br/>
+																		<br/>
+																		<br/>
+																		<button type="submit" class="btn btn-primary" onClick={routeChange} style={{marginTop:'30px',marginLeft:'120px', width:'120px'}}>
+																				Print </button>
+                                </div>
+	
+			
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="even-info">
-                  <i class="fa fa-map-marker"></i>
-                  <h3 style={{marginLeft:'120px'}}> Train Number: 901</h3>
-									<h3 style={{marginLeft:'120px'}}> Seat Number: 55</h3>
-                </div>
-								
-                <a href="#">Print</a>
-              </section>
-            </article>
-            <article class="card fl-left">
-              <section class="date">
-							<img src={logo} alt="nouran" style={{width:'100px', height:'150px',flexDirection: 'row', marginTop:'4	0px'}}/>
-              </section>
-              <section class="card-cont">
-							<h2 style={{marginLeft:'90px'}}>Ticket Info</h2>
-                <h3 style={{marginLeft:'90px', textDecoration:'none'}}>From : Cairo        To : Alexandria</h3>
-                <div class="even-date">
-                  <i class="fa fa-calendar"></i>
-                  <time>
-									<span style={{marginLeft:'120px'}}>Date: 28 december 2014</span>
-                  <span style={{marginLeft:'120px'}}>Time: 08:55pm </span>
-                  </time>
-                </div>
-                <div class="even-info">
-                  <i class="fa fa-map-marker"></i>
-                  <h3 style={{marginLeft:'120px' ,textDecoration:'none'}}> Train Number: 901</h3>
-									<h3 style={{marginLeft:'120px',textDecoration:'none'}}> Seat Number: 55</h3>
-                </div>
-                <a href="#">Print</a>
-              </section>
-            </article>
-          </div>
-  
-          </section>
-    )
+            </div>
+        </div>
+    </div>
+</div>
+		)
 }
 
 export default Ticket

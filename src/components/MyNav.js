@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 function myNav() {
     return (
         <div>
-            <Card style={{ color: "white", height: "100px" }}>
+            <Card style={{ color: "white", height: "34px" }}>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">

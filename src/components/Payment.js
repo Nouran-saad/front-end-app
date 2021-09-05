@@ -132,7 +132,7 @@ history.push(path);
                       <div class="col-md-6">
                         {" "}
                         <input
-
+                          style={{marginLeft:'200px'}}
                           type="submit"
                           value="MAKE A PAYMENT &nbsp; &#xf178;"
                           class="btn btn-info placeicon"
