@@ -12,7 +12,7 @@ function Profile() {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="/trains" style={{marginLeft:'1182px', fontSize:'25px'}}>
                   Trains
                 </a>
@@ -22,7 +22,7 @@ function Profile() {
                   More Info
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px'}}>
                   Profile
                 </a>
