@@ -10,10 +10,7 @@ import MoreInfo from './components/MoreInfo';
 import Profile from './components/Profile';
 import Ticket from './components/Ticket';
 
-
-
 function App() {
-
 
   return (
     
