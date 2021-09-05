@@ -2,7 +2,6 @@ import React from 'react'
 import MyNav from "./MyNav";
 
 
-
 function Profile() {
     return (
         <div>
