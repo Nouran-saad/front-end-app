@@ -27,7 +27,6 @@ function Profile() {
                   Profile
                 </a>
               </li>
-
             </ul>
           </div>
         </nav>
