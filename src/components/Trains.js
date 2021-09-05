@@ -32,6 +32,7 @@ function Trains() {
             <input type="radio" value="Male" name="gender" /> One Way Ticket
             <input type="radio" value="Female" name="gender" style={{marginLeft:'40px' , marginBottom:'40px'}} /> Going and coming back
           </div>
+          
           <div style={{display:'flex', flexWrap:'wrap'}}>
             <label style={{marginLeft:'30px',marginRight:'40px', marginBottom:'50px'}}>Travel From</label>
             <DropdownButton id="dropdown-basic-button" title="Travel from" style={{textAlign:'center'}}>
