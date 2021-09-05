@@ -25,7 +25,7 @@ function Trains() {
 
       <div style={{textAlign:'left', backgroundColor:'white', display:'flex', flexWrap:'wrap'}}>
 
-        <img src={logo} alt="train" style={{width:'880px', height:'600px', opacity:0.4,flexDirection: 'row'}}/>
+        <img src={logo} alt="train" style={{width:'880px', height:'660px', opacity:0.4,flexDirection: 'row',marginTop:'10px'}}/>
         <Card style={{backgroundColor: "orange", opacity:0.7 ,marginLeft:'80px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
           <h1 style={{textAlign:'center', marginTop: '10px',marginBottom: '20px'}}>Book Now!</h1>
           <div style={{display:'flex', flexWrap:'wrap'}}>
