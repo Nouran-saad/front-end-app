@@ -27,6 +27,7 @@ function Ticket() {
                   <h3 style={{marginLeft:'120px'}}> Train Number: 901</h3>
 									<h3 style={{marginLeft:'120px'}}> Seat Number: 55</h3>
                 </div>
+								
                 <a href="#">Print</a>
               </section>
             </article>
