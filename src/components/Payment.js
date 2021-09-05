@@ -1,7 +1,18 @@
 import React from "react";
 import "./payment.css";
+import { useHistory } from "react-router-dom";
+
+
 
 function Payment() {
+
+    
+const history = useHistory();
+
+const routeChange = () =>{ 
+let path = '/ticket'; 
+history.push(path);
+}
   return (
     <div class="container-fluid">
       <div class="row justify-content-center">
@@ -121,9 +132,11 @@ function Payment() {
                       <div class="col-md-6">
                         {" "}
                         <input
+                          style={{marginLeft:'200px'}}
                           type="submit"
                           value="MAKE A PAYMENT &nbsp; &#xf178;"
                           class="btn btn-info placeicon"
+                          onClick={routeChange}
                         />{" "}
                       </div>
                     </div>

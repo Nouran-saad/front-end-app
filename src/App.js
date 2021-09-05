@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import axios from 'axios';
+//import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/Login'
 import CreateAccount from './components/CreateAccount';
@@ -8,6 +8,8 @@ import Trains from './components/Trains';
 import Payment from './components/Payment';
 import MoreInfo from './components/MoreInfo';
 import Profile from './components/Profile';
+import Ticket from './components/Ticket';
+
 
 
 function App() {
@@ -36,6 +38,9 @@ function App() {
             </Route>
             <Route exact path="/payment">
               <Payment />
+            </Route>
+            <Route exact path="/ticket">
+              <Ticket />
             </Route>
           </Switch>
         </div>

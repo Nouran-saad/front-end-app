@@ -14,7 +14,7 @@ function CreateAccount() {
   return (
     <div>
       <form style={{marginLeft:'450px'}}>
-        <Card style={{marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
+        <Card style={{backgroundColor:'lightskyblue',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'50px',marginBottom:'20px'}}>
           <h2 style={{marginTop:'30px',marginBottom:'30px'}}>Register</h2>
 
           <div className="form-group">
@@ -38,6 +38,16 @@ function CreateAccount() {
           </div>
 
           <div className="form-group">
+            <label>Phone number</label>
+            <input
+              type="tel"
+              className="form-control"
+              placeholder="Telephone number"
+							style={{marginBottom:'10px'}}
+            />
+          </div>
+
+          <div className="form-group">
             <label>Username</label>
             <input
               type="username"
@@ -47,6 +57,15 @@ function CreateAccount() {
             />
           </div>
 
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+							style={{marginBottom:'10px'}}
+            />
+          </div>
           <div className="form-group">
             <label>Password</label>
             <input

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
@@ -14,7 +14,7 @@ function Login() {
 
   return (
     <form style={{marginLeft:'450px'}}>
-      <Card style={{marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
+      <Card style={{backgroundColor:'lightskyblue',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
         <h2 style={{marginTop:'30px',marginBottom:'30px'}}>Log in</h2>
 
         <div className="form-group">

@@ -25,13 +25,14 @@ function Trains() {
 
       <div style={{textAlign:'left', backgroundColor:'white', display:'flex', flexWrap:'wrap'}}>
 
-        <img src={logo} alt="nouran" style={{width:'880px', height:'621px', opacity:0.4,flexDirection: 'row'}}/>
-        <Card style={{backgroundColor: "orange", opacity:0.7 ,marginLeft:'80px',marginBottom:'30px', marginTop:'30px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
+        <img src={logo} alt="train" style={{width:'880px', height:'660px', opacity:0.4,flexDirection: 'row',marginTop:'10px'}}/>
+        <Card style={{backgroundColor: "orange", opacity:0.7 ,marginLeft:'80px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
           <h1 style={{textAlign:'center', marginTop: '10px',marginBottom: '20px'}}>Book Now!</h1>
           <div style={{display:'flex', flexWrap:'wrap'}}>
             <input type="radio" value="Male" name="gender" /> One Way Ticket
             <input type="radio" value="Female" name="gender" style={{marginLeft:'40px' , marginBottom:'40px'}} /> Going and coming back
           </div>
+          
           <div style={{display:'flex', flexWrap:'wrap'}}>
             <label style={{marginLeft:'30px',marginRight:'40px', marginBottom:'50px'}}>Travel From</label>
             <DropdownButton id="dropdown-basic-button" title="Travel from" style={{textAlign:'center'}}>
