@@ -11,7 +11,7 @@ function MoreInfo() {
       <MyNav />
       <Card
         style={{
-          backgroundColor: "#c2c2d6",
+          backgroundColor: "#e0e0eb",
           marginTop: "80px",
           width: "50%",
           height: "250px",
@@ -48,7 +48,7 @@ function MoreInfo() {
       </Card>
       <Card
         style={{
-          backgroundColor: "#c2c2d6",
+          backgroundColor: "#e0e0eb",
           marginTop: "80px",
           width: "50%",
           height: "250px",
@@ -85,7 +85,7 @@ function MoreInfo() {
       </Card>
       <Card
         style={{
-          backgroundColor: "#c2c2d6",
+          backgroundColor: "#e0e0eb",
           marginTop: "80px",
           width: "50%",
           height: "250px",
