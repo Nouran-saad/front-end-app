@@ -16,7 +16,7 @@ function CreateAccount() {
     <div>
       <form style={{marginLeft:'480px'}}>
         <Card style={{backgroundColor:'#e0e0eb',marginTop:'30px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'50px',marginBottom:'20px'}}>
-          <h2 style={{marginTop:'30px',marginBottom:'30px'}}>Register</h2>
+          <h2 style={{marginTop:'30px',marginBottom:'30px',textDecoration:'underline'}}>Register</h2>
 
           <div className="form-group">
             <label>First name</label>

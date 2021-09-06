@@ -9,10 +9,11 @@ function MoreInfo() {
   return (
     <div>
       <MyNav />
+      <h1 style={{marginTop:'60px',textDecoration:'underline'}}>All Trains</h1>
       <Card
         style={{
           backgroundColor: "#e0e0eb",
-          marginTop: "80px",
+          marginTop: "30px",
           width: "50%",
           height: "250px",
           marginLeft: "350px",
@@ -26,7 +27,7 @@ function MoreInfo() {
             src={logo}
             class="img-radius"
             alt="User-Profile"
-            style={{ width: "160px", marginLeft: "50px" , marginTop: '25px'}}
+            style={{ width: "160px", marginLeft: "50px" , marginTop: '50px'}}
           />
         </div>
         <div style={{ width: "33%", marginTop:'30px' }}>
@@ -49,7 +50,7 @@ function MoreInfo() {
       <Card
         style={{
           backgroundColor: "#e0e0eb",
-          marginTop: "80px",
+          marginTop: "50px",
           width: "50%",
           height: "250px",
           marginLeft: "350px",
@@ -63,7 +64,7 @@ function MoreInfo() {
             src={logo1}
             class="img-radius"
             alt="User-Profile"
-            style={{ width: "160px", marginLeft: "50px" , marginTop: '25px' }}
+            style={{ width: "160px", marginLeft: "50px" , marginTop: '50px' }}
           />
         </div>
         <div style={{ width: "33%", marginTop:'30px' }}>
@@ -86,7 +87,7 @@ function MoreInfo() {
       <Card
         style={{
           backgroundColor: "#e0e0eb",
-          marginTop: "80px",
+          marginTop: "50px",
           width: "50%",
           height: "250px",
           marginLeft: "350px",
@@ -100,7 +101,7 @@ function MoreInfo() {
             src={logo2}
             class="img-radius"
             alt="User-Profile"
-            style={{ width: "160px",  marginLeft: "50px" , marginTop: '25px' }}
+            style={{ width: "160px",  marginLeft: "50px" , marginTop: '50px' }}
           />
         </div>
         <div style={{ width: "33%" , marginTop:'30px'}}>

@@ -47,7 +47,7 @@ history.push(path);
                         Total Price
                       </p>
                       <h2 class="bill-head" id="total">
-                         523.65 EGP
+                          523.65 EGP
                       </h2>{" "}
                       <small class="bill-date" id="total-label">
                         Price includes all taxes

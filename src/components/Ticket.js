@@ -34,9 +34,9 @@ function Ticket() {
                 </div>
                 <div class="col-sm-8" style={{backgroundColor:'#e0e0eb'}}>
                   <div class="card-block">
-                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">
-                      Information
-                    </h6>
+                    <h2 class="m-b-20 p-b-5 b-b-default f-w-600" style={{textDecoration:'underline'}}>
+                      Ticket Information
+                    </h2>
                     <div class="row">
                       <div class="col-sm-6">
                         <p class="m-b-10 f-w-600">From</p>

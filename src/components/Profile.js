@@ -13,19 +13,25 @@ function Profile() {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/trains" style={{marginLeft:'1182px', fontSize:'25px'}}>
+                <a class="nav-link" href="/trains" style={{ fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   Trains
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px'}}>
+                <a class="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   More Info
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px'}}>
+                <a class="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   Profile
                 </a>
+              </li>
+              <li class="nav-item" style={{textDecoration:'underline',marginLeft:'300px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black',paddingTop:'7px'}}>
+                Train Reservation Website
+              </li>
+              <li class="nav-item" style={{marginLeft:'400px', fontSize:'20px',fontFamily:'Trebuchet MS',color:'black',paddingTop:'10px'}}>
+                &copy; copyrights 2021
               </li>
             </ul>
           </div>
@@ -39,9 +45,9 @@ function Profile() {
       />
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
       <div class="container emp-profile" style={{width: '800px',backgroundColor:'#e0e0eb'}}>
         <form method="post" style={{textAlign:'center', marginLeft:'70px'}}>
+          <h1 style={{marginBottom:'20px', textDecoration:'underline'}}>Your Profile</h1>
           <div class="row">
             <div class="col-md-4" style={{marginRight: '70px'}}  >
               

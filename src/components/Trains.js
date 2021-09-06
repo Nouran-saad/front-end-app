@@ -26,7 +26,7 @@ function Trains() {
       <div style={{opacity:'0.8',padding:'50px',height: '660px',textAlign:'left',backgroundSize: 'cover',backgroundImage:'url("https://images.pexels.com/photos/159148/regional-train-rail-cars-platform-deutsche-bahn-159148.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")',backgroundRepeat: 'no-repeat'}}>
 
         <Card class="card-product" style={{backgroundColor: "#e0e0eb", opacity:1 ,marginLeft:'50px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
-          <h1 style={{textAlign:'center', marginTop: '10px',marginBottom: '20px'}}>Book Now!</h1>
+          <h1 style={{textAlign:'center', marginTop: '10px',marginBottom: '20px',textDecoration:'underline'}}>Book Now!</h1>
           <div style={{display:'flex', flexWrap:'wrap'}}>
             <input type="radio" value="Male" name="gender" /> One Way Ticket
             <input type="radio" value="Female" name="gender" style={{marginLeft:'40px' , marginBottom:'40px'}} /> Going and coming back
@@ -59,7 +59,7 @@ function Trains() {
 						style={{marginBottom:'10px'}}
           />
           <button type="submit" class="btn btn-primary" onClick={routeChange} style={{marginTop:'30px',marginLeft:'120px', width:'120px'}}>
-          Sign in
+          Book now
         </button>
 
         </Card>
