@@ -33,7 +33,7 @@ function MoreInfo() {
           <p>Number:</p>
           <h6 style={{ color: "#3333ff" }}>302</h6>
           <p>Type:</p>
-          <h6 style={{ color: "#3333ff" }}>Epress</h6>
+          <h6 style={{ color: "#3333ff" }}>Express</h6>
           <p>From:</p>
           <h6 style={{ color: "#3333ff" }}>Cairo</h6>
         </div>
@@ -70,7 +70,7 @@ function MoreInfo() {
           <p>Number:</p>
           <h6 style={{ color: "#3333ff" }}>500</h6>
           <p>Type:</p>
-          <h6 style={{ color: "#3333ff" }}>Epress</h6>
+          <h6 style={{ color: "#3333ff" }}>Express</h6>
           <p>From:</p>
           <h6 style={{ color: "#3333ff" }}>Cairo</h6>
         </div>
@@ -107,7 +107,7 @@ function MoreInfo() {
           <p>Number:</p>
           <h6 style={{ color: "#3333ff" }}>222</h6>
           <p>Type:</p>
-          <h6 style={{ color: "#3333ff" }}>Epress</h6>
+          <h6 style={{ color: "#3333ff" }}>Express</h6>
           <p>From:</p>
           <h6 style={{ color: "#3333ff" }}>Alexandria</h6>
         </div>
