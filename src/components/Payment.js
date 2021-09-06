@@ -57,7 +57,7 @@ history.push(path);
                 </div>
               </div>
               <div class="col-md-7 col-sm-12 p-0 box">
-                <div class="card rounded-0 border-0 card2" id="paypage">
+                <div class="card rounded-0 border-0 card2" id="paypage" style={{backgroundColor:'#e0e0eb'}}>
                   <div class="form-card">
                     <h2 id="heading2" class="text-danger">
                       Payment Method

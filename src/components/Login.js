@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import './login.css';
 
 function Login() {
 
@@ -13,8 +14,9 @@ function Login() {
   }
 
   return (
-    <form style={{marginLeft:'480px'}}>
-      <Card style={{backgroundColor:'lightskyblue',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
+    <div style={{marginTop:'0px', padding:'0px'}}>
+      <form style={{marginLeft:'480px'}}>
+      <Card style={{backgroundColor:'#e0e0eb',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
         <h2 style={{marginTop:'30px',marginBottom:'30px'}}>Log in</h2>
 
         <div className="form-group">
@@ -23,7 +25,7 @@ function Login() {
             type="username"
             className="form-control"
             placeholder="Enter username"
-						style={{marginBottom:'10px'}}
+						style={{marginBottom:'15px'}}
           />
         </div>
 
@@ -33,7 +35,7 @@ function Login() {
             type="password"
             className="form-control"
             placeholder="Enter password"
-						style={{marginBottom:'10px'}}
+						style={{marginBottom:'15px'}}
           />
         </div>
 
@@ -43,15 +45,15 @@ function Login() {
               type="checkbox"
               className="custom-control-input"
               id="customCheck1"
-							style={{marginBottom:'10px'}}
+							style={{marginBottom:'30px'}}
             />
-            <label className="custom-control-label" htmlFor="customCheck1" style={{marginBottom:'10px'}}>
+            <label className="custom-control-label" htmlFor="customCheck1" style={{marginBottom:'20px'}}>
               Remember me
             </label>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" onClick={routeChange}>
+        <button type="submit" className="btn btn-primary" onClick={routeChange}>
           Sign in
         </button>
         <p className="forgot-password text-right">
@@ -61,6 +63,9 @@ function Login() {
 				<p>New to this website? <a href="/create">Sign Up</a> now</p>
       </Card>
     </form>
+
+    </div>
+    
   );
 }
 
