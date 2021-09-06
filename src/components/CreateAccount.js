@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import './login.css';
 
 function CreateAccount() {
 
@@ -14,7 +15,7 @@ function CreateAccount() {
   return (
     <div>
       <form style={{marginLeft:'480px'}}>
-        <Card style={{backgroundColor:'lightskyblue',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'50px',marginBottom:'20px'}}>
+        <Card style={{backgroundColor:'#e0e0eb',marginTop:'30px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'50px',marginBottom:'20px'}}>
           <h2 style={{marginTop:'30px',marginBottom:'30px'}}>Register</h2>
 
           <div className="form-group">
