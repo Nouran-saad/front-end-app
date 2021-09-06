@@ -16,7 +16,7 @@ function Ticket() {
       <div class="padding">
         <div class="row container d-flex justify-content-center">
           <div class="col-xl-6 col-md-12">
-            <div class="card user-card-full">
+            <div class="card user-card-full" style={{borderRadius:'40px'}}>
               <div class="row m-l-0 m-r-0">
                 <div class="col-sm-4 bg-c-lite-green user-profile">
                   <div class="card-block text-center text-white">

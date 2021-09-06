@@ -1,6 +1,5 @@
 import React from "react";
 import { Card,DropdownButton,Dropdown } from "react-bootstrap";
-import './trains.css'
 import DatePicker from "react-datepicker";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -25,7 +24,7 @@ function Trains() {
 
       <div style={{opacity:'0.8',padding:'50px',height: '660px',textAlign:'left',backgroundSize: 'cover',backgroundImage:'url("https://images.pexels.com/photos/159148/regional-train-rail-cars-platform-deutsche-bahn-159148.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")',backgroundRepeat: 'no-repeat'}}>
 
-        <Card class="card-product" style={{backgroundColor: "#e0e0eb", opacity:1 ,marginLeft:'50px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
+        <Card style={{boxShadow:'0 8px 25px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.9)',borderRadius:'40px',backgroundColor: "#e0e0eb", opacity:1 ,marginLeft:'50px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
           <h1 style={{textAlign:'center', marginTop: '10px',marginBottom: '20px',textDecoration:'underline'}}>Book Now!</h1>
           <div style={{display:'flex', flexWrap:'wrap'}}>
             <input type="radio" value="Male" name="gender" /> One Way Ticket

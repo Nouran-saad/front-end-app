@@ -23,12 +23,10 @@ function myNav() {
                   Profile
                 </a>
               </li>
-              <li class="nav-item" style={{textDecoration:'underline',marginLeft:'300px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black',paddingTop:'7px'}}>
-                Train Reservation Website
+              <li class="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
+                Go Train
               </li>
-              <li class="nav-item" style={{marginLeft:'400px', fontSize:'20px',fontFamily:'Trebuchet MS',color:'black',paddingTop:'10px'}}>
-                &copy; copyrights 2021
-              </li>
+
             </ul>
           </div>
         </nav>

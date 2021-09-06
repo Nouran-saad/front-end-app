@@ -16,7 +16,7 @@ function Login() {
   return (
     <div style={{marginTop:'0px', padding:'0px'}}>
       <form style={{marginLeft:'480px'}}>
-      <Card style={{backgroundColor:'#e0e0eb',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
+      <Card style={{borderRadius:'40px',backgroundColor:'#e0e0eb',marginTop:'80px', width:'50%', paddingRight:'100px', paddingLeft:'100px',paddingBottom:'100px'}}>
         <h2 style={{marginTop:'30px',marginBottom:'30px',textDecoration:'underline'}}>Log in</h2>
 
         <div className="form-group">

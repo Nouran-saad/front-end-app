@@ -27,12 +27,10 @@ function Profile() {
                   Profile
                 </a>
               </li>
-              <li class="nav-item" style={{textDecoration:'underline',marginLeft:'300px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black',paddingTop:'7px'}}>
-                Train Reservation Website
+              <li class="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
+                Go Train
               </li>
-              <li class="nav-item" style={{marginLeft:'400px', fontSize:'20px',fontFamily:'Trebuchet MS',color:'black',paddingTop:'10px'}}>
-                &copy; copyrights 2021
-              </li>
+
             </ul>
           </div>
         </nav>
@@ -45,9 +43,9 @@ function Profile() {
       />
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <div class="container emp-profile" style={{width: '800px',backgroundColor:'#e0e0eb'}}>
+      <div class="container emp-profile" style={{borderRadius:'40px',width: '800px',backgroundColor:'#e0e0eb'}}>
         <form method="post" style={{textAlign:'center', marginLeft:'70px'}}>
-          <h1 style={{marginBottom:'20px', textDecoration:'underline'}}>Your Profile</h1>
+          <h1 style={{marginBottom:'30px', textDecoration:'underline',marginRight:'55px'}}>Your Profile</h1>
           <div class="row">
             <div class="col-md-4" style={{marginRight: '70px'}}  >
               
@@ -104,7 +102,7 @@ function Profile() {
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <label style={{marginRight:'50px',}}>Email</label>
+                      <label style={{marginRight:'69px',}}>Email</label>
                     </div>
                     <div class="col-md-6" >
                       <p style={{marginRight:'180px',marginLeft:'100px'}}>saad@gmail.com</p>
@@ -112,7 +110,7 @@ function Profile() {
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <label style={{marginRight:'80px',marginLeft:'35px'}}>Phone No.</label>
+                      <label style={{marginRight:'80px',marginLeft:'48px'}}>Phone No.</label>
                     </div>
                     <div class="col-md-6">
                       <p style={{marginRight:'180px',marginLeft:'120px'}}>0122948585</p>

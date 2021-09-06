@@ -18,10 +18,11 @@ history.push(path);
       <div class="row justify-content-center">
         <div class="col-12 col-lg-11">
           <div class="card card0 rounded-0">
-            <div class="row">
+            <div class="row"  >
               <div class="col-md-5 d-md-block d-none p-0 box">
                 <div class="card rounded-0 border-0 card1" id="bill">
                   <h3 id="heading1">Payment Summary</h3>
+
                   <div class="row">
                     <div class="col-lg-7 col-8 mt-4 line pl-4">
                       <h2 class="bill-head">Trip 1</h2>{" "}
@@ -56,7 +57,7 @@ history.push(path);
                   </div>
                 </div>
               </div>
-              <div class="col-md-7 col-sm-12 p-0 box">
+              <div class="col-md-7 col-sm-12 p-0 box" >
                 <div class="card rounded-0 border-0 card2" id="paypage" style={{backgroundColor:'#e0e0eb'}}>
                   <div class="form-card">
                     <h2 id="heading2" class="text-danger">
