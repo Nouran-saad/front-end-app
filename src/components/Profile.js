@@ -40,7 +40,7 @@ function Profile() {
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-      <div class="container emp-profile" style={{width: '800px'}}>
+      <div class="container emp-profile" style={{width: '800px',backgroundColor:'#e0e0eb'}}>
         <form method="post" style={{textAlign:'center', marginLeft:'70px'}}>
           <div class="row">
             <div class="col-md-4" style={{marginRight: '70px'}}  >
