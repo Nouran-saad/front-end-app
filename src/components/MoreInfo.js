@@ -15,7 +15,7 @@ function MoreInfo() {
           marginTop: "80px",
           width: "50%",
           height: "250px",
-          marginLeft: "250px",
+          marginLeft: "350px",
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "row",
@@ -25,7 +25,7 @@ function MoreInfo() {
           <img
             src={logo}
             class="img-radius"
-            alt="User-Profile-Image"
+            alt="User-Profile"
             style={{ width: "160px", marginLeft: "50px" , marginTop: '25px'}}
           />
         </div>
@@ -52,7 +52,7 @@ function MoreInfo() {
           marginTop: "80px",
           width: "50%",
           height: "250px",
-          marginLeft: "250px",
+          marginLeft: "350px",
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "row",
@@ -62,7 +62,7 @@ function MoreInfo() {
           <img
             src={logo1}
             class="img-radius"
-            alt="User-Profile-Image"
+            alt="User-Profile"
             style={{ width: "160px", marginLeft: "50px" , marginTop: '25px' }}
           />
         </div>
@@ -89,17 +89,17 @@ function MoreInfo() {
           marginTop: "80px",
           width: "50%",
           height: "250px",
-          marginLeft: "250px",
+          marginLeft: "350px",
           display: "flex",
           flexWrap: "wrap",
-          flexDirection: "row",
+          flexDirection: "row"
         }}
       >
         <div style={{ width: "33%" }}>
           <img
             src={logo2}
             class="img-radius"
-            alt="User-Profile-Image"
+            alt="User-Profile"
             style={{ width: "160px",  marginLeft: "50px" , marginTop: '25px' }}
           />
         </div>
