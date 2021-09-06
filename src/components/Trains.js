@@ -1,6 +1,6 @@
 import React from "react";
 import { Card,DropdownButton,Dropdown } from "react-bootstrap";
-import logo from './Trainss.jpg'
+import './trains.css'
 import DatePicker from "react-datepicker";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -25,7 +25,7 @@ function Trains() {
 
       <div style={{opacity:'0.8',padding:'50px',height: '660px',textAlign:'left',backgroundSize: 'cover',backgroundImage:'url("https://images.pexels.com/photos/159148/regional-train-rail-cars-platform-deutsche-bahn-159148.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")',backgroundRepeat: 'no-repeat'}}>
 
-        <Card style={{backgroundColor: "#e0e0eb", opacity:1 ,marginLeft:'50px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
+        <Card class="card-product" style={{backgroundColor: "#e0e0eb", opacity:1 ,marginLeft:'50px',marginBottom:'30px', marginTop:'10px', width:'500px', paddingRight:'50px', paddingLeft:'80px',paddingBottom:'20px'}}>
           <h1 style={{textAlign:'center', marginTop: '10px',marginBottom: '20px'}}>Book Now!</h1>
           <div style={{display:'flex', flexWrap:'wrap'}}>
             <input type="radio" value="Male" name="gender" /> One Way Ticket
@@ -52,7 +52,7 @@ function Trains() {
             <DatePicker selected={startDate2} onChange={(date2) => setStartDate2(date2)} showTimeSelect  dateFormat="Pp" />
           </div>
 
-          <label style={{marginTop:'20px'}}>Number of passegers</label>
+          <label style={{marginTop:'20px',marginRight:'10px'}}>Number of passegers</label>
           <input
             type="Number"
             placeholder="Enter number"
