@@ -9,7 +9,7 @@ function MoreInfo() {
   return (
     <div style={{paddingBottom:'20px'}}>
       <MyNav />
-      <h1 style={{marginTop:'60px',marginLeft:'60px'}}>Trains Details</h1>
+      <h1 style={{marginTop:'60px',marginLeft:'60px'}}>Trips Details</h1>
       <Card
         style={{
           backgroundColor: "#e0e0eb",
@@ -42,8 +42,8 @@ function MoreInfo() {
         <div style={{ width: "33%", marginTop:'20px' }}>
           <p>Time:</p>
           <h6 style={{ color: "#3333ff" ,marginBottom:'20px'}}>3:00 PM</h6>
-          <p>Price Range:</p>
-          <h6 style={{ color: "#3333ff",marginBottom:'20px' }}>100-200</h6>
+          <p>Price:</p>
+          <h6 style={{ color: "#3333ff",marginBottom:'20px' }}>200 EGP</h6>
           <p>To:</p>
           <h6 style={{ color: "#3333ff"}}>Alexandria</h6>
         </div>
@@ -80,8 +80,8 @@ function MoreInfo() {
         <div style={{ width: "33%" , marginTop:'20px'}}>
           <p>Time:</p>
           <h6 style={{ color: "#3333ff" , marginBottom:'20px'}}>9:00 PM</h6>
-          <p>Price Range:</p>
-          <h6 style={{ color: "#3333ff" , marginBottom:'20px'}}>50-100</h6>
+          <p>Price:</p>
+          <h6 style={{ color: "#3333ff" , marginBottom:'20px'}}>100 EGP</h6>
           <p>To:</p>
           <h6 style={{ color: "#3333ff" }}>Marsa-Matrouh</h6>
         </div>
@@ -118,8 +118,8 @@ function MoreInfo() {
         <div style={{ width: "33%", marginTop:'20px' }}>
           <p>Time:</p>
           <h6 style={{ color: "#3333ff", marginBottom:'20px' }}>6:00 AM</h6>
-          <p>Price Range:</p>
-          <h6 style={{ color: "#3333ff", marginBottom:'20px' }}>150-250</h6>
+          <p>Price:</p>
+          <h6 style={{ color: "#3333ff", marginBottom:'20px' }}>250 EGP</h6>
           <p>To:</p>
           <h6 style={{ color: "#3333ff" }}>Cairo</h6>
         </div>

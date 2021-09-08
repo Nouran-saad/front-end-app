@@ -51,7 +51,7 @@ function Trains() {
             <DatePicker selected={startDate2} onChange={(date2) => setStartDate2(date2)} showTimeSelect  dateFormat="Pp" />
           </div>
 
-          <label style={{marginTop:'20px',marginRight:'10px'}}>Number of passegers</label>
+          <label style={{marginTop:'20px',marginRight:'10px'}}>Number of tickets</label>
           <input
             type="Number"
             placeholder="Enter number"
