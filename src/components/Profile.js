@@ -9,25 +9,25 @@ function Profile() {
     <div>
       <div>
             <Card id="aaa" style={{ color: "white", height: "55px" }}>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/trains" style={{ fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="/trains" style={{ fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   Trains
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+              <li className="nav-item">
+                <a className="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   More Info
                 </a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+              <li className="nav-item active">
+                <a className="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   Profile
                 </a>
               </li>
-              <li class="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
+              <li className="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
                 Go Train
               </li>
 
