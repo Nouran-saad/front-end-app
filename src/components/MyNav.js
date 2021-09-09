@@ -1,38 +1,86 @@
-import React from 'react'
+import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function myNav() {
-    return (
-        <div>
-            <Card style={{ color: "white", height: "34px" }}>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="/trains" style={{marginLeft:'17px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+const myNav=(props)=> {
+
+  const username=props.user; 
+
+  return (
+    <div>
+      <Card style={{ color: "white", height: "34px" }}>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
+                <Link
+                  className="nav-link"
+                  style={{
+                    marginLeft: "17px",
+                    fontSize: "25px",
+                    fontFamily: "Trebuchet MS",
+                    fontWeight: "bold",
+                  }}
+                  to={{
+                    pathname: "/trains",
+                    state: { username},
+                  }}
+                >
                   Trains
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "25px",
+                    fontFamily: "Trebuchet MS",
+                    fontWeight: "bold",
+                  }}
+                  to={{
+                    pathname: "/moreInfo",
+                    state: {username},
+                  }}
+                >
                   More Info
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  style={{
+                    marginLeft: "10px",
+                    fontSize: "25px",
+                    fontFamily: "Trebuchet MS",
+                    fontWeight: "bold",
+                  }}
+                  to={{
+                    pathname: "/profile",
+                    state: {  username},
+                  }}
+                >
                   Profile
-                </a>
+                </Link>
               </li>
-              <li class="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
+              <li
+                className="nav-item"
+                style={{
+                  marginLeft: "1030px",
+                  fontSize: "35px",
+                  fontFamily: "Trebuchet MS",
+                  fontWeight: "bold",
+                  color: "black",
+                }}
+              >
                 Go Train
               </li>
-
             </ul>
           </div>
         </nav>
       </Card>
-        </div>
-    )
+    </div>
+  );
 }
 
-export default myNav
+export default myNav;

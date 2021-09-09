@@ -1,80 +1,89 @@
 import React from "react";
 import "./ticket.css";
 import logo from "./qrcode.png";
+import {useLocation} from "react-router-dom";
 
 function Ticket() {
+
+  const { state } = useLocation();
+  const { username } = state;
+  console.log(username);
+
   const routeChange = () => {
     alert("Done");
   };
 
   return (
     <div
-      class="page-content page-container"
+    className="page-content page-container"
       id="page-content"
-      style={{ marginTop: "100px",marginLeft:'60px' }}
+      style={{ marginTop: "100px", marginLeft: "60px" }}
     >
-      <div class="padding">
-        <div class="row container d-flex justify-content-center">
-          <div class="col-xl-6 col-md-12">
-            <div class="card user-card-full" style={{borderRadius:'40px'}}>
-              <div class="row m-l-0 m-r-0">
-                <div class="col-sm-4 bg-c-lite-green user-profile">
-                  <div class="card-block text-center text-white">
-                    <div class="m-b-25">
+      <div className="padding">
+        <div className="row container d-flex justify-content-center">
+          <div className="col-xl-6 col-md-12">
+            <div className="card user-card-full" style={{ borderRadius: "40px" }}>
+              <div className="row m-l-0 m-r-0">
+                <div className="col-sm-4 bg-c-lite-green user-profile">
+                  <div className="card-block text-center text-white">
+                    <div className="m-b-25">
                       {" "}
                       <img
                         src={logo}
-                        class="img-radius"
-                        alt="User-Profile-Image"
+                        className="radius"
+                        alt="User-Profile"
                         style={{ width: "160px" }}
                       />{" "}
                     </div>
-                    <h6 class="f-w-600">Scan This QR Code</h6>
+                    <h6 className="f-w-600">Scan This QR Code</h6>
                   </div>
                 </div>
-                <div class="col-sm-8" style={{backgroundColor:'#e0e0eb'}}>
-                  <div class="card-block">
-                    <h2 class="m-b-20 p-b-5 b-b-default f-w-600" style={{textDecoration:'underline'}}>
+                <div className="col-sm-8" style={{ backgroundColor: "#e0e0eb" }}>
+                  <div className="card-block">
+                    <h2
+                      className="m-b-20 p-b-5 b-b-default f-w-600"
+                      style={{ textDecoration: "underline" }}
+                    >
                       Ticket Information
                     </h2>
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">From</p>
-                        <h6 class="text-muted f-w-400">Cairo</h6>
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <p className="m-b-10 f-w-600">From</p>
+                        <h6 className="text-muted f-w-400">Cairo</h6>
                       </div>
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">To</p>
-                        <h6 class="text-muted f-w-400">Alexandria</h6>
+                      <div className="col-sm-6">
+                        <p className="m-b-10 f-w-600">To</p>
+                        <h6 className="text-muted f-w-400">Alexandria</h6>
                       </div>
                       <br />
                       <br />
                       <br />
 
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">Date</p>
-                        <h6 class="text-muted f-w-400">25/05/2021</h6>
+                      <div className="col-sm-6">
+                        <p className="m-b-10 f-w-600">Date</p>
+                        <h6 className="text-muted f-w-400">25/05/2021</h6>
                       </div>
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">Time</p>
-                        <h6 class="text-muted f-w-400">22:00</h6>
+                      <div className="col-sm-6">
+                        <p className="m-b-10 f-w-600">Time</p>
+                        <h6 className="text-muted f-w-400">22:00</h6>
                       </div>
                       <br />
                       <br />
                       <br />
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">Train Number</p>
-                        <h6 class="text-muted f-w-400">903</h6>
+                      <div className="col-sm-6">
+                        <p className="m-b-10 f-w-600">Train Number</p>
+                        <h6 className="text-muted f-w-400">903</h6>
                       </div>
-                      <div class="col-sm-6">
-                        <p class="m-b-10 f-w-600">Seat Number</p>
-                        <h6 class="text-muted f-w-400">55</h6>
+                      <div className="col-sm-6">
+                        <p className="m-b-10 f-w-600">Seat Number</p>
+                        <h6 className="text-muted f-w-400">55</h6>
                       </div>
                       <br />
                       <br />
                       <br />
                       <button
                         type="submit"
-                        class="btn btn-primary"
+                        className="btn btn-primary"
                         onClick={routeChange}
                         style={{
                           marginTop: "30px",

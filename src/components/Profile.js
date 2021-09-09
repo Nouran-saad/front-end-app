@@ -3,8 +3,17 @@ import { Table } from "react-bootstrap";
 import "./profile.css";
 import logo from "./qr.png";
 import { Card } from "react-bootstrap";
+import {useLocation} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 function Profile() {
+
+  const location = useLocation();
+  const {username}=location.state;
+  console.log(username);
+
+
   return (
     <div>
       <div>
@@ -13,19 +22,28 @@ function Profile() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/trains" style={{ fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+                <Link className="nav-link" to={{
+                    pathname: "/trains",
+                    state: {username},
+                  }} style={{ fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   Trains
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/moreInfo" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+                <Link className="nav-link" to={{
+                    pathname: "/moreInfo",
+                    state: { username},
+                  }} style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   More Info
-                </a>
+                </Link>
               </li>
               <li className="nav-item active">
-                <a className="nav-link" href="/profile" style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
+                <Link className="nav-link" to={{
+                    pathname: "/profile",
+                    state: {  username},
+                  }} style={{marginLeft:'10px', fontSize:'25px',fontFamily:'Trebuchet MS',fontWeight:'bold'}}>
                   Profile
-                </a>
+                </Link>
               </li>
               <li className="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
                 Go Train
@@ -43,16 +61,16 @@ function Profile() {
       />
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <div class="container emp-profile" style={{borderRadius:'40px',width: '800px',backgroundColor:'#e0e0eb'}}>
+      <div className="container emp-profile" style={{borderRadius:'40px',width: '800px',backgroundColor:'#e0e0eb'}}>
         <form method="post" style={{textAlign:'center', marginLeft:'70px'}}>
           <h1 style={{marginBottom:'30px', textDecoration:'underline',marginRight:'55px'}}>Your Profile</h1>
-          <div class="row">
-            <div class="col-md-4" style={{marginRight: '70px'}}  >
+          <div className="row">
+            <div className="col-md-4" style={{marginRight: '70px'}}  >
               
                 <img src={logo} alt="nouran" />
               </div>
               
-              <div class="col-md-4" >
+              <div className="col-md-4" >
               <Table striped bordered hover variant="light" style={{marginTop:'30px'}} >
                   
                 <thead>
@@ -83,36 +101,36 @@ function Profile() {
             </div>
             
           </div>
-          <div class="row">
-            <div class="col-md-8">
-              <div class="tab-content profile-tab" id="myTabContent">
+          <div className="row">
+            <div className="col-md-8">
+              <div className="tab-content profile-tab" id="myTabContent">
                 <div
-                  class="tab-pane fade show active"
+                  className="tab-pane fade show active"
                   id="home"
                   role="tabpanel"
                   aria-labelledby="home-tab"
                 >
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label style={{marginTop:'15px',marginRight:'80px',marginLeft:'50px'}}>User Name</label>
                     </div>
-                    <div class="col-md-6"  style={{marginTop:'15px',maxWidth:'1 0%',flex:'60%'}}>
+                    <div className="col-md-6"  style={{marginTop:'15px',maxWidth:'1 0%',flex:'60%'}}>
                       <p style={{marginLeft:'100px'}}>saad</p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label style={{marginRight:'69px',}}>Email</label>
                     </div>
-                    <div class="col-md-6" >
+                    <div className="col-md-6" >
                       <p style={{marginRight:'180px',marginLeft:'100px'}}>saad@gmail.com</p>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <div className="row">
+                    <div className="col-md-6">
                       <label style={{marginRight:'80px',marginLeft:'48px'}}>Phone No.</label>
                     </div>
-                    <div class="col-md-6">
+                    <div className="col-md-6">
                       <p style={{marginRight:'180px',marginLeft:'120px'}}>0122948585</p>
                     </div>
                   </div>

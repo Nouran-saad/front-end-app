@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-//import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/Login'
 import CreateAccount from './components/CreateAccount';
@@ -44,16 +43,5 @@ function App() {
     </Router>
   );
 }
-/*
-function testBack(){
-  axios.post('http://localhost:4000/login')
-  .then(res=>{
-    console.log('Heyyyyy');
-  })
-  .catch(err=>{
-    console.log(err);
-  })
-  console.log('hiii');
-}
-*/
+
 export default App;

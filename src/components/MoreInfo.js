@@ -6,15 +6,21 @@ import logo1 from "./rounded2.png";
 import logo2 from "./rounded3.png";
 import axios from "axios";
 import { useEffect,useState } from "react";
+import {useLocation} from "react-router-dom";
 
 function MoreInfo() {
 
   const [trips, setArrayTrips] = useState([]);
   const [isChanged, setIsChanged] = useState(false);
 
+  
+  const location = useLocation();
+  const {username}=location.state;
+  console.log(username);
+
   useEffect(() => {
-    async function getData(){
-    await axios
+    function getData(){
+      axios
       .post("http://localhost:4000/moreInfo")
       .then((resp) => {
         setArrayTrips(resp.data);
@@ -26,27 +32,28 @@ function MoreInfo() {
       });
     }
     getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[isChanged]);
 
   return (
     <div style={{paddingBottom:'20px'}}>
-      <MyNav />
+      <MyNav user={username}/>
       <h1 style={{marginTop:'60px',marginLeft:'60px'}}>Trips Details</h1>
 
       { isChanged?
         <div>
         {trips.map((trip) => {
           var imgTemp=logo;
-          if(trip.train_img=="roundedtrain"){
-            var imgTemp=logo;
+          if(trip.train_img==="roundedtrain"){
+            imgTemp=logo;
           }
-          else if(trip.train_img=="rounded2"){
+          else if(trip.train_img==="rounded2"){
             imgTemp=logo1;
           }
-          else if(trip.train_img=="rounded3"){
+          else if(trip.train_img==="rounded3"){
             imgTemp=logo2;
           }
-          return <Card
+          return <Card key={trip.trip_no}
           style={{
             backgroundColor: "#e0e0eb",
             marginTop: "30px",
@@ -62,7 +69,7 @@ function MoreInfo() {
           <div style={{ width: "33%" }}>
             <img
               src={imgTemp}
-              class="img-radius"
+              className="img-radius"
               alt="User-Profile"
               style={{ width: "160px", marginLeft: "50px" , marginTop: '50px'}}
             />

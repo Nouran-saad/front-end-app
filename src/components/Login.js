@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import "./login.css";
 
+
 function Login() {
   const history = useHistory();
   const [invalidUser, setInvalidUser] = useState(false);
@@ -22,7 +23,7 @@ function Login() {
       .then((resp) => {
         if (resp.data.message === "Successfull login") {
           let path = "/trains";
-          history.push(path);
+          history.push(path,{username: document.getElementById("username_input").value});
         }
         if (resp.data.message === "User not found") {
           setInvalidUser(true);
@@ -36,10 +37,14 @@ function Login() {
       .catch((err) => {
         console.log(err);
       });
+
+  
   };
 
   return (
+
     <div style={{ marginTop: "0px", padding: "0px" }}>
+
       <form
         onSubmit={(e) => {
           routeChange(e);
@@ -114,7 +119,7 @@ function Login() {
             Sign in
           </button>
           <p className="forgot-password text-right">
-            Forgot <a href="#">password?</a>
+            Forgot <a href="/">password?</a>
           </p>
           <br></br>
           <p>

@@ -178,7 +178,7 @@ function CreateAccount() {
             ):( <p></p>)}
           </div>
 					<br></br>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
           Sign Up
         </button>
           <p className="forgot-password text-right">

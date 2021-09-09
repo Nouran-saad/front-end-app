@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 import MyNav from "./MyNav";
+import {useLocation} from "react-router-dom";
 
 function Trains() {
 
@@ -12,15 +13,18 @@ function Trains() {
   const [startDate2, setStartDate2] = useState(new Date());
 
   const history = useHistory();
+  const {state} = useLocation();
+  const { username } = state;
+  console.log(username);
 
   const routeChange = () =>{ 
     let path = '/payment'; 
-    history.push(path);
+    history.push(path,{username});
   }
 
   return (
     <div>
-      <MyNav/>
+      <MyNav user={username}/>
 
       <div style={{opacity:'0.8',padding:'50px',height: '660px',textAlign:'left',backgroundSize: 'cover',backgroundImage:'url("https://images.pexels.com/photos/159148/regional-train-rail-cars-platform-deutsche-bahn-159148.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")',backgroundRepeat: 'no-repeat'}}>
 
@@ -57,7 +61,7 @@ function Trains() {
             placeholder="Enter number"
 						style={{marginBottom:'10px'}}
           />
-          <button type="submit" class="btn btn-primary" onClick={routeChange} style={{marginTop:'30px',marginLeft:'120px', width:'120px'}}>
+          <button type="submit" className="btn btn-primary" onClick={routeChange} style={{marginTop:'30px',marginLeft:'120px', width:'120px'}}>
           Book now
         </button>
 
