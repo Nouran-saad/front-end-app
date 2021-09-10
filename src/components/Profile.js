@@ -5,7 +5,7 @@ import logo from "./qr.png";
 import { Card } from "react-bootstrap";
 import {useLocation} from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import logo44 from './trainLogo.png'
 
 function Profile() {
 
@@ -45,7 +45,17 @@ function Profile() {
                   Profile
                 </Link>
               </li>
-              <li className="nav-item" style={{marginLeft:'1030px', fontSize:'35px',fontFamily:'Trebuchet MS',fontWeight:'bold',color:'black'}}>
+              <img src= {logo44} alt= 'logoooo' style = {{height: '50 px', width:"50px",marginLeft:'960px'}}/>
+              <li
+                className="nav-item"
+                style={{
+                  marginLeft: "10px",
+                  fontSize: "35px",
+                  fontFamily: "Trebuchet MS",
+                  fontWeight: "bold",
+                  color: "black",
+                }}
+              >
                 Go Train
               </li>
 

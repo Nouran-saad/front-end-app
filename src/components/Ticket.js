@@ -1,28 +1,38 @@
 import React from "react";
 import "./ticket.css";
 import logo from "./qrcode.png";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+import { useHistory } from "react-router-dom";
 
 function Ticket() {
 
   const { state } = useLocation();
   const { username } = state;
   console.log(username);
+  const history = useHistory();
+
 
   const routeChange = () => {
-    alert("Done");
+
+    let path = "/trains";
+    history.push(path,{username});
   };
 
   return (
     <div
-    className="page-content page-container"
+      className="page-content page-container"
       id="page-content"
       style={{ marginTop: "100px", marginLeft: "60px" }}
     >
       <div className="padding">
         <div className="row container d-flex justify-content-center">
           <div className="col-xl-6 col-md-12">
-            <div className="card user-card-full" style={{ borderRadius: "40px" }}>
+            <div
+              className="card user-card-full"
+              style={{ borderRadius: "40px" }}
+            >
               <div className="row m-l-0 m-r-0">
                 <div className="col-sm-4 bg-c-lite-green user-profile">
                   <div className="card-block text-center text-white">
@@ -38,7 +48,10 @@ function Ticket() {
                     <h6 className="f-w-600">Scan This QR Code</h6>
                   </div>
                 </div>
-                <div className="col-sm-8" style={{ backgroundColor: "#e0e0eb" }}>
+                <div
+                  className="col-sm-8"
+                  style={{ backgroundColor: "#e0e0eb" }}
+                >
                   <div className="card-block">
                     <h2
                       className="m-b-20 p-b-5 b-b-default f-w-600"
@@ -81,18 +94,49 @@ function Ticket() {
                       <br />
                       <br />
                       <br />
-                      <button
-                        type="submit"
-                        className="btn btn-primary"
-                        onClick={routeChange}
-                        style={{
-                          marginTop: "30px",
-                          marginLeft: "120px",
-                          width: "120px",
-                        }}
+                      <Popup
+                        contentStyle={{ height: "300px", width: "300px" }}
+                        trigger={
+                          <button
+                            type="submit"
+                            className="btn btn-primary"
+                            onClick={routeChange}
+                            style={{
+                              marginTop: "30px",
+                              marginLeft: "100px",
+                              width: "150px",
+                            }}
+                          >
+                            Print ticket{" "}
+                          </button>
+                        }
+                        position="right center"
                       >
-                        Print{" "}
-                      </button>
+                        <div
+                          style={{
+                            textAlign: "center",
+                            color: "orange",
+                            fontWeight: "bold",
+                            marginTop: "80px",
+                          }}
+                        >
+                          {" "}
+                          <p>Your trip has been successfully booked</p> <p style={{fontSize:'20px'}}>Thanks for choosing us!</p>
+                          <button
+                            type="submit"
+                            className="btn btn-primary"
+                            onClick={routeChange}
+                            style={{
+                              backgroundColor: "orange",
+                              marginTop: "60px",
+                              marginLeft: "20px",
+                              width: "200px",
+                            }}
+                          >
+                            Go to trains page{" "}
+                          </button>{" "}
+                        </div>
+                      </Popup>
                     </div>
                   </div>
                 </div>

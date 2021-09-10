@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo44 from './trainLogo.png'
 
 const myNav=(props)=> {
 
@@ -63,10 +64,11 @@ const myNav=(props)=> {
                   Profile
                 </Link>
               </li>
+              <img src= {logo44} alt= 'logoooo' style = {{height: '50 px', width:"50px",marginLeft:'960px'}}/>
               <li
                 className="nav-item"
                 style={{
-                  marginLeft: "1030px",
+                  marginLeft: "10px",
                   fontSize: "35px",
                   fontFamily: "Trebuchet MS",
                   fontWeight: "bold",
@@ -75,6 +77,7 @@ const myNav=(props)=> {
               >
                 Go Train
               </li>
+              
             </ul>
           </div>
         </nav>
