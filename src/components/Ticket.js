@@ -9,15 +9,15 @@ import { useHistory } from "react-router-dom";
 function Ticket() {
 
   const { state } = useLocation();
-  const { username } = state;
-  console.log(username);
+  const { request,info } = state;
+  console.log(request,info);
   const history = useHistory();
 
 
   const routeChange = () => {
 
     let path = "/trains";
-    history.push(path,{username});
+    history.push(path,{request,info});
   };
 
   return (

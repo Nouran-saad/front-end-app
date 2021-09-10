@@ -10,12 +10,14 @@ function Payment() {
 const history = useHistory();
 
 const {state} = useLocation();
-const { username } = state;
-console.log(username);
+const { request,info } = state;
+console.log(request);
+console.log(info);
+
 
 const routeChange = () =>{ 
 let path = '/ticket'; 
-history.push(path,{username});
+history.push(path,{request,info});
 }
   return (
     <div className="container-fluid">

@@ -13,7 +13,6 @@ function MoreInfo() {
   const [trips, setArrayTrips] = useState([]);
   const [isChanged, setIsChanged] = useState(false);
 
-  
   const location = useLocation();
   const {username}=location.state;
   console.log(username);

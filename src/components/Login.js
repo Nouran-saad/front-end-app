@@ -21,8 +21,9 @@ function Login() {
     axios
       .post("http://localhost:4000/login", request)
       .then((resp) => {
-        if (resp.data.message === "Successfull login") {
+        if (resp.data.message === "Successful login") {
           let path = "/trains";
+          request={username: document.getElementById("username_input").value}
           history.push(path,{username: document.getElementById("username_input").value});
         }
         if (resp.data.message === "User not found") {

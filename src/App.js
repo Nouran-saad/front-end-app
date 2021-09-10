@@ -38,6 +38,10 @@ function App() {
             <Route exact path="/ticket">
               <Ticket />
             </Route>
+            <Route path="*">
+              <h1 style={{marginTop:'250px'}}>404 Page</h1>
+              <a href="/" style={{color:'white'}}>Return to login page</a>
+            </Route>
           </Switch>
         </div>
     </Router>
