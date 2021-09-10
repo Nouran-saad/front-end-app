@@ -14,8 +14,8 @@ function MoreInfo() {
   const [isChanged, setIsChanged] = useState(false);
 
   const location = useLocation();
-  const {username}=location.state;
-  console.log(username);
+  const {request,info}=location.state;
+  console.log(request);
 
   useEffect(() => {
     function getData(){
@@ -36,7 +36,7 @@ function MoreInfo() {
 
   return (
     <div style={{paddingBottom:'20px'}}>
-      <MyNav user={username}/>
+      <MyNav user={{request,info}}/>
       <h1 style={{marginTop:'60px',marginLeft:'60px'}}>Trips Details</h1>
 
       { isChanged?

@@ -23,7 +23,12 @@ function Trains() {
 
   const history = useHistory();
   const { state } = useLocation();
-  const { username } = state;
+  const { request,info } = state;
+  const username=request.username;
+  console.log(username);
+  console.log(request);
+  console.log(info);
+  
 
   const routeChange = () => {
     noOfTickets = document.getElementById("noTickets").value;
@@ -135,7 +140,7 @@ function Trains() {
 
   return (
     <div>
-      <MyNav user={username} />
+      <MyNav user={{request,info}} />
 
       <div
         style={{

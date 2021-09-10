@@ -5,7 +5,7 @@ import logo44 from './trainLogo.png'
 
 const myNav=(props)=> {
 
-  const username=props.user; 
+  const {request,info}=props.user;
 
   return (
     <div>
@@ -24,7 +24,7 @@ const myNav=(props)=> {
                   }}
                   to={{
                     pathname: "/trains",
-                    state: { username},
+                    state: { request,info},
                   }}
                 >
                   Trains
@@ -41,7 +41,7 @@ const myNav=(props)=> {
                   }}
                   to={{
                     pathname: "/moreInfo",
-                    state: {username},
+                    state: {request,info},
                   }}
                 >
                   More Info
@@ -58,7 +58,7 @@ const myNav=(props)=> {
                   }}
                   to={{
                     pathname: "/profile",
-                    state: {  username},
+                    state: {  request,info},
                   }}
                 >
                   Profile

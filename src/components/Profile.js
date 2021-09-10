@@ -11,8 +11,10 @@ import { useEffect, useState } from "react";
 
 function Profile() {
   const location = useLocation();
-  const { username } = location.state;
-  console.log(username);
+  const { request,info } = location.state;
+  const username=request.username;
+  console.log(request);
+  console.log(info);
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [isChanged, setIsChanged] = useState(false);
@@ -46,7 +48,7 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/trains",
-                      state: { username },
+                      state: { request,info },
                     }}
                     style={{
                       fontSize: "25px",
@@ -62,7 +64,7 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/moreInfo",
-                      state: { username },
+                      state: { request,info },
                     }}
                     style={{
                       marginLeft: "10px",
@@ -79,7 +81,7 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/profile",
-                      state: { username },
+                      state: { request,info },
                     }}
                     style={{
                       marginLeft: "10px",

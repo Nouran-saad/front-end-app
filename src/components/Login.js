@@ -23,8 +23,9 @@ function Login() {
       .then((resp) => {
         if (resp.data.message === "Successful login") {
           let path = "/trains";
-          request={username: document.getElementById("username_input").value}
-          history.push(path,{username: document.getElementById("username_input").value});
+          var request={username: document.getElementById("username_input").value}
+          var info={};
+          history.push(path,{request,info});
         }
         if (resp.data.message === "User not found") {
           setInvalidUser(true);
