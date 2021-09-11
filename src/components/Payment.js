@@ -53,14 +53,16 @@ function Payment() {
       axios
         .post("http://localhost:4000/payment", {paymentTemp,request,info})
         .then((resp) => {
+          var ticketInfo= resp.data
           console.log(resp.data);
+          let path = "/ticket";
+          history.push(path, { request, info,ticketInfo });
         })
         .catch((err) => {
           console.log(err);
         });
 
-      let path = "/ticket";
-      history.push(path, { request, info });
+      
     }
   };
   return (
