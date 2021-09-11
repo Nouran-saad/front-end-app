@@ -9,7 +9,7 @@ const myNav=(props)=> {
 
   return (
     <div>
-      <Card style={{ color: "white", height: "34px" }}>
+      <Card style={{ color: "white", height: "34px" ,width:'100%'}}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">

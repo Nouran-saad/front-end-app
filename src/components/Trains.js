@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import MyNav from "./MyNav";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import Footer from "./Footer";
 
 function Trains() {
   const [tempDate, setTempDate] = useState(new Date());
@@ -305,6 +306,7 @@ function Trains() {
           }
         </Card>
       </div>
+      <Footer/>
     </div>
   );
 }

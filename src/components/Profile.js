@@ -8,16 +8,19 @@ import { Link } from "react-router-dom";
 import logo44 from "./trainLogo.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
 
 function Profile() {
   const location = useLocation();
-  const { request,info } = location.state;
-  const username=request.username;
+  const { request, info } = location.state;
+  const username = request.username;
   console.log(request);
   console.log(info);
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [isChanged, setIsChanged] = useState(false);
+  const [isBooked, setIsBooked] = useState(false);
+  const [isReturn, setIsReturn] = useState(false);
 
   useEffect(() => {
     function getData() {
@@ -31,6 +34,13 @@ function Profile() {
         .catch((err) => {
           console.log(err);
         });
+    }
+
+    if (info.tripNoStart !== undefined) {
+      setIsBooked(true);
+      if (info.tripNoReturn !== null) {
+        setIsReturn(true);
+      }
     }
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -48,7 +58,7 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/trains",
-                      state: { request,info },
+                      state: { request, info },
                     }}
                     style={{
                       fontSize: "25px",
@@ -64,7 +74,7 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/moreInfo",
-                      state: { request,info },
+                      state: { request, info },
                     }}
                     style={{
                       marginLeft: "10px",
@@ -81,7 +91,7 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/profile",
-                      state: { request,info },
+                      state: { request, info },
                     }}
                     style={{
                       marginLeft: "10px",
@@ -130,7 +140,7 @@ function Profile() {
         className="container emp-profile"
         style={{
           borderRadius: "40px",
-          width: "800px",
+          width: "1200px",
           backgroundColor: "#e0e0eb",
         }}
       >
@@ -144,42 +154,61 @@ function Profile() {
           >
             Your Profile
           </h1>
-          <div className="row">
-            <div className="col-md-4" style={{ marginRight: "70px" }}>
-              <img src={logo} alt="nouran" />
+          <div className="row" style={{width:'500px'}}>
+            <div className="col-md-4" >
+              <img src={logo} alt="nouran" style={{marginLeft:'50px'}} />
             </div>
 
             <div className="col-md-4">
-              <Table
-                striped
-                bordered
-                hover
-                variant="light"
-                style={{ marginTop: "30px" }}
-              >
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Train Number</th>
-                    <th>Date</th>
-                    <th>Ticket Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>12579</td>
-                    <td>11/20/2020</td>
-                    <td>Paid</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>87581</td>
-                    <td>4/9/2021</td>
-                    <td>Paid</td>
-                  </tr>
-                </tbody>
-              </Table>
+              {isBooked ? (
+                <Table
+                  striped
+                  bordered
+                  hover
+                  variant="light"
+                  style={{ marginTop: "1px",width:'1200px' , marginLeft:'150px'}}
+                >
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Trip Number</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th style={{minWidth:'100px'}}>Date</th>
+                      <th>Time</th>
+                      <th style={{minWidth:'130px'}}>No of tickets</th>
+                      <th>Ticket Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>{info.tripNoStart.trip_no}</td>
+                      <td>{request.from}</td>
+                      <td>{request.to}</td>
+                      <td>{request.startDate}</td>
+                      <td>{request.startTime}</td>
+                      <td>{request.noOfTickets}</td>
+                      <td>Paid</td>
+                    </tr>
+
+                    {isReturn ? (
+                      <tr>
+                        <td>2</td>
+                        <td>{info.tripNoReturn.trip_no}</td>
+                        <td>{request.to}</td>
+                        <td>{request.from}</td>
+                        <td>{request.returnDate}</td>
+                        <td>{request.returnTime}</td>
+                        <td>{request.noOfTickets}</td>
+                        <td>Paid</td>
+                      </tr>
+                    ) : null}
+                  </tbody>
+                </Table>
+              ) : (
+                <h2 style={{width:'400px',marginLeft:'300px',marginTop:'50px',color:'red'}}>You don't have any trips yet.</h2>
+              )}
               <div />
               <div />
             </div>
@@ -248,6 +277,7 @@ function Profile() {
           </div>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 }

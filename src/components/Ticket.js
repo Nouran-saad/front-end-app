@@ -121,7 +121,7 @@ function Ticket() {
                             <div className="col-sm-6">
                               <p className="m-b-10 f-w-600">Seat Number</p>
                               <h6 className="text-muted f-w-400">
-                                {ticketInfo.ticket.seat_no+arr2}
+                                {ticketInfo.ticket.seat_no + arr2}
                               </h6>
                             </div>
                             <br />
@@ -256,7 +256,7 @@ function Ticket() {
                               <div className="col-sm-6">
                                 <p className="m-b-10 f-w-600">Seat Number</p>
                                 <h6 className="text-muted f-w-400">
-                                  {ticketInfo.ticket.seat_no+arr2}
+                                  {ticketInfo.ticket.seat_no + arr2}
                                 </h6>
                               </div>
                               <br />
@@ -327,6 +327,20 @@ function Ticket() {
           </div>
         );
       })}
+      <button
+        type="submit"
+        className="btn btn-primary"
+        onClick={routeChange}
+        style={{
+          backgroundColor: "orange",
+          marginTop: "60px",
+          marginLeft: "20px",
+          marginBottom:'50px',
+          width: "200px",
+        }}
+      >
+        Go to trains page{" "}
+      </button>{" "}
     </div>
   );
 }
