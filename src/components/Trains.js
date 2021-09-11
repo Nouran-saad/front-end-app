@@ -20,15 +20,15 @@ function Trains() {
   const [oneWay, setOneWay] = useState("no");
   const [travelFrom, setTravelFrom] = useState("no");
   const [arrivingTo, setArrivingTo] = useState("no");
+  const [isNotAvailable, setIsNotAvailable] = useState(false);
 
   const history = useHistory();
   const { state } = useLocation();
-  const { request,info } = state;
-  const username=request.username;
+  const { request, info } = state;
+  const username = request.username;
   console.log(username);
   console.log(request);
   console.log(info);
-  
 
   const routeChange = () => {
     noOfTickets = document.getElementById("noTickets").value;
@@ -69,7 +69,6 @@ function Trains() {
       if (oneWay === "false") {
         returnDate = tempDate2.toDateString().toString();
         returnTime = tempDate2.toLocaleTimeString().toString();
-        console.log(returnDate);
         if (returnTime[1] === ":") {
           returnTime = "0" + returnTime;
         }
@@ -116,8 +115,14 @@ function Trains() {
         .then((resp) => {
           var info = resp.data;
           console.log(info);
-          let path = "/payment";
-          history.push(path, { request,info });
+
+          if (info.tripNoStart !== "no" && info.tripNoReturn !== "no") {
+            let path = "/payment";
+            history.push(path, { request, info });
+          }
+          else{
+            setIsNotAvailable(true);
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -140,7 +145,7 @@ function Trains() {
 
   return (
     <div>
-      <MyNav user={{request,info}} />
+      <MyNav user={{ request, info }} />
 
       <div
         style={{
@@ -295,6 +300,9 @@ function Trains() {
           >
             Book now
           </button>
+          {
+            isNotAvailable? <p style={{textAlign:'center', color:'red',marginTop:'15px'}}>Please choose correct date and time, please check more info page for trips</p> : <p></p>
+          }
         </Card>
       </div>
     </div>
