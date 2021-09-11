@@ -59,8 +59,8 @@ function Payment() {
           console.log(err);
         });
 
-      //let path = "/ticket";
-      //history.push(path, { request, info });
+      let path = "/ticket";
+      history.push(path, { request, info });
     }
   };
   return (
