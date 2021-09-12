@@ -13,11 +13,12 @@ import {
 
 function Footer() {
   return (
-    <Box>
-      <Container>
+    <Box >
+      
+      <Container >
         <Row>
           <Column
-            style={{ width: "100%", marginTop: "4px", marginLeft: "60px" }}
+            style={{ width: "100%", marginTop: "30px", marginLeft: "80px" }}
           >
             <Heading>About Us</Heading>
             <h5
@@ -37,7 +38,7 @@ function Footer() {
             </h5>
           </Column>
           <Column style={{ width: "100%", marginLeft: "240px" }}>
-            <Heading style={{ marginLeft: "30px" }}>Contact Us</Heading>
+            <Heading style={{ marginLeft: "30px",marginTop:'30px' }}>Contact Us</Heading>
             <ul>
               <BsFillEnvelopeFill />{" "}
               <span style={{ fontSize: "20px", marginLeft: "7px" }}>
@@ -57,7 +58,7 @@ function Footer() {
               </span>
             </ul>
           </Column>
-          <Column style={{ width: "100%", marginLeft: "450px" }}>
+          <Column style={{ width: "100%", marginLeft: "450px",marginTop:'30px' }}>
             <Heading>Social Media</Heading>
             <FooterLink href="http://www.facebook.com" target="_blank">
               <i className="fab fa-facebook-f">

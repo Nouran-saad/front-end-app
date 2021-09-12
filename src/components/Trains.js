@@ -30,6 +30,13 @@ function Trains() {
   console.log(username);
   console.log(request);
   console.log(info);
+  localStorage.setItem("request2",request);
+
+
+  const signOut=()=>{
+    localStorage.setItem("isAuthenticated","null");
+    history.push("/");
+  }
 
   const routeChange = () => {
     noOfTickets = document.getElementById("noTickets").value;
@@ -160,6 +167,7 @@ function Trains() {
           backgroundRepeat: "no-repeat",
         }}
       >
+        
         <Card
           style={{
             boxShadow:
@@ -305,6 +313,9 @@ function Trains() {
             isNotAvailable? <p style={{textAlign:'center', color:'red',marginTop:'15px'}}>Please choose correct date and time, please check more info page for trips</p> : <p></p>
           }
         </Card>
+        <button type="submit" onClick={signOut} className="btn btn-primary" style={{width:'200px',fontSize:'30px', marginTop:'10px',marginLeft:'700px',position:'absolute',right:300,top:630,boxShadow:"0 8px 25px 0 rgba(0,0,0,0.9), 0 6px 20px 0 rgba(0,0,0,0.9)",borderRadius: "40px"}}>
+            Sign out
+          </button>
       </div>
       <Footer/>
     </div>

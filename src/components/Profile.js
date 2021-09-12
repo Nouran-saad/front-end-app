@@ -12,7 +12,7 @@ import Footer from "./Footer";
 
 function Profile() {
   const location = useLocation();
-  const { request, info } = location.state;
+  var { request, info } = location.state;
   const username = request.username;
   console.log(request);
   console.log(info);
@@ -21,6 +21,8 @@ function Profile() {
   const [isChanged, setIsChanged] = useState(false);
   const [isBooked, setIsBooked] = useState(false);
   const [isReturn, setIsReturn] = useState(false);
+  request=window.localStorage.getItem("request2");
+  console.log(request);
 
   useEffect(() => {
     function getData() {

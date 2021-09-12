@@ -1,11 +1,10 @@
-import React from "react";
+//import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState} from "react";
 import "./login.css";
-
 
 function Login() {
   const history = useHistory();
@@ -13,6 +12,7 @@ function Login() {
   const [invalidPass, setInvalidPass] = useState(false);
 
   const routeChange = (e) => {
+
     e.preventDefault();
     let request = {
       username: document.getElementById("username_input").value,
@@ -22,10 +22,13 @@ function Login() {
       .post("http://localhost:4000/login", request)
       .then((resp) => {
         if (resp.data.message === "Successful login") {
+          window.localStorage.setItem("isAuthenticated", "true");
           let path = "/trains";
-          var request={username: document.getElementById("username_input").value}
-          var info={};
-          history.push(path,{request,info});
+          var request = {
+            username: document.getElementById("username_input").value,
+          };
+          var info = {};
+          history.push(path, { request, info });
         }
         if (resp.data.message === "User not found") {
           setInvalidUser(true);
@@ -39,14 +42,10 @@ function Login() {
       .catch((err) => {
         console.log(err);
       });
-
-  
   };
 
   return (
-
     <div style={{ marginTop: "0px", padding: "0px" }}>
-
       <form
         onSubmit={(e) => {
           routeChange(e);
@@ -84,7 +83,9 @@ function Login() {
             />
             {invalidUser ? (
               <span style={{ color: "red" }}>Invalid username</span>
-            ):( <p></p>)}
+            ) : (
+              <p></p>
+            )}
           </div>
 
           <div className="form-group">
@@ -97,8 +98,12 @@ function Login() {
             />
           </div>
           {invalidPass ? (
-              <span style={{ color: "red",marginBottom:'10px' }}>Invalid password</span>
-            ):( <p></p>)}
+            <span style={{ color: "red", marginBottom: "10px" }}>
+              Invalid password
+            </span>
+          ) : (
+            <p></p>
+          )}
           <div className="form-group">
             <div className="custom-control custom-checkbox">
               <input
