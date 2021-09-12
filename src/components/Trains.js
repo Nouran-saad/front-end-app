@@ -30,7 +30,7 @@ function Trains() {
   console.log(username);
   console.log(request);
   console.log(info);
-  localStorage.setItem("request2",request);
+  //localStorage.setItem("request2",request);
 
 
   const signOut=()=>{
