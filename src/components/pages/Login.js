@@ -7,13 +7,14 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 // import login style file
-import "./login.css";
+import "../styles/login.css";
 
 function Login() {
   const history = useHistory();
   // use state hooks
   const [invalidUser, setInvalidUser] = useState(false);
   const [invalidPass, setInvalidPass] = useState(false);
+  localStorage.setItem("isAuthenticated","null");
 
   // when click login
   const routeChange = (e) => {

@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Card } from "react-bootstrap";
 // import images to display
-import logo from "./roundedtrain.png";
-import logo1 from "./rounded2.png";
-import logo2 from "./rounded3.png";
+import logo from "../images/roundedtrain.png";
+import logo1 from "../images/rounded2.png";
+import logo2 from "../images/rounded3.png";
 
 import axios from "axios";
 // import nav bar and footer components

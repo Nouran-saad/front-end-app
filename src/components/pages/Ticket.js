@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import "./ticket.css";
+import "../styles/ticket.css";
 
-import logo from "./qrcode.png";
+import logo from "../images/qrcode.png";
 
 function Ticket() {
   const history = useHistory();

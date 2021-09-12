@@ -1,5 +1,5 @@
 import React from "react";
-import "./payment.css";
+import "../styles/payment.css";
 import { useHistory } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";

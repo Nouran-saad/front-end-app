@@ -6,9 +6,9 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import "./profile.css";
-import logo from "./qr.png";
-import logo44 from "./trainLogo.png";
+import "../styles/profile.css";
+import logo from "../images/qr.png";
+import logo44 from "../images/trainLogo.png";
 
 import axios from "axios";
 

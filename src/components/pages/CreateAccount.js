@@ -2,7 +2,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 // import style file
-import "./login.css";
+import "../styles/login.css";
 import { Card } from "react-bootstrap";
 //import axios to connect Api
 import axios from "axios";

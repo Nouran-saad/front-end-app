@@ -10,7 +10,7 @@ import {
   Column,
   FooterLink,
   Heading,
-} from "./FooterStyles";
+} from "../styles/FooterStyles";
 
 function Footer() {
   return (

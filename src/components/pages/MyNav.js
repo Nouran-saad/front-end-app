@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo44 from "./trainLogo.png";
+import logo44 from "../images/trainLogo.png";
 
 const myNav = (props) => {
   // to access the needed details
