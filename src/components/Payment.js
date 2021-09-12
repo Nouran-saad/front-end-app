@@ -15,7 +15,7 @@ function Payment() {
 
   console.log(request);
   console.log(info);
-
+  // tell what component need to do after rendering
   useEffect(() => {
     if (request.returnDate === null) {
       setIsReturn(false);
@@ -23,6 +23,7 @@ function Payment() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Payment methods
   const changetoPaypal = () => {
     setMethod("paypal");
   };
@@ -32,6 +33,7 @@ function Payment() {
 
   const routeChange = () => {
     let paymentTemp = {
+      // to get user payment details
       username: request.username,
       method: method,
       name_card: document.getElementById("name").value,
@@ -50,19 +52,18 @@ function Payment() {
     ) {
       alert("Please fill all the data");
     } else {
+      // to save payment details and send it to ticket
       axios
-        .post("http://localhost:4000/payment", {paymentTemp,request,info})
+        .post("http://localhost:4000/payment", { paymentTemp, request, info })
         .then((resp) => {
-          var ticketInfo= resp.data
+          var ticketInfo = resp.data;
           console.log(resp.data);
           let path = "/ticket";
-          history.push(path, { request, info,ticketInfo });
+          history.push(path, { request, info, ticketInfo });
         })
         .catch((err) => {
           console.log(err);
         });
-
-      
     }
   };
   return (

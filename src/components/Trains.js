@@ -1,23 +1,33 @@
 import React from "react";
-import { Card, DropdownButton, Dropdown } from "react-bootstrap";
-import DatePicker from "react-datepicker";
+
+
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import "react-datepicker/dist/react-datepicker.css";
-import MyNav from "./MyNav";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import { Card, DropdownButton, Dropdown } from "react-bootstrap";
+
+import MyNav from "./MyNav";
 import Footer from "./Footer";
 
+import axios from "axios";
+
+
 function Trains() {
+
   const [tempDate, setTempDate] = useState(new Date());
   const [tempDate2, setTempDate2] = useState(new Date());
   const [removeReturn, setRemoveReturn] = useState(true);
+
+// intialize variables
   var startDate = "";
   var startTime = "";
   var noOfTickets = 0;
   var returnDate = "";
   var returnTime = "";
+
   const [oneWay, setOneWay] = useState("no");
   const [travelFrom, setTravelFrom] = useState("no");
   const [arrivingTo, setArrivingTo] = useState("no");
@@ -32,7 +42,7 @@ function Trains() {
   console.log(info);
   //localStorage.setItem("request2",request);
 
-
+// return to login page
   const signOut=()=>{
     localStorage.setItem("isAuthenticated","null");
     history.push("/");
@@ -49,6 +59,7 @@ function Trains() {
     } else if (noOfTickets <= 0) {
       alert("Please enter a positive number of tickets");
     } else {
+      // to adjust the date and time format
       startDate = tempDate.toDateString().toString();
       startTime = tempDate.toLocaleTimeString().toString();
       if (startTime[1] === ":") {
@@ -74,6 +85,7 @@ function Trains() {
           startTime[6] +
           startTime[7];
       }
+      // check whether the user books a return ticket or not
       if (oneWay === "false") {
         returnDate = tempDate2.toDateString().toString();
         returnTime = tempDate2.toLocaleTimeString().toString();
@@ -123,6 +135,7 @@ function Trains() {
         .then((resp) => {
           var info = resp.data;
           console.log(info);
+// make sure that there are comptaible trips with the user requested details
 
           if (info.tripNoStart !== "no" && info.tripNoReturn !== "no") {
             let path = "/payment";
@@ -137,12 +150,14 @@ function Trains() {
         });
     }
   };
+  // to control actions on Radio buttons
   const onValueChange = (event) => {
     setOneWay(event.target.value);
     if (event.target.value === "false") {
       setRemoveReturn(true);
     } else setRemoveReturn(false);
   };
+    // to control actions on DropDown menu
   const fromFun = (data) => {
     setTravelFrom(data);
   };

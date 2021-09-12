@@ -1,7 +1,8 @@
 import React from "react";
+// import react icons
 import { BsFillEnvelopeFill, BsGeoAlt, BsPhone } from "react-icons/bs";
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook } from "react-icons/fa";
-
+// import footer style
 import {
   Box,
   Container,
@@ -13,9 +14,8 @@ import {
 
 function Footer() {
   return (
-    <Box >
-      
-      <Container >
+    <Box>
+      <Container>
         <Row>
           <Column
             style={{ width: "100%", marginTop: "30px", marginLeft: "80px" }}
@@ -38,7 +38,9 @@ function Footer() {
             </h5>
           </Column>
           <Column style={{ width: "100%", marginLeft: "240px" }}>
-            <Heading style={{ marginLeft: "30px",marginTop:'30px' }}>Contact Us</Heading>
+            <Heading style={{ marginLeft: "30px", marginTop: "30px" }}>
+              Contact Us
+            </Heading>
             <ul>
               <BsFillEnvelopeFill />{" "}
               <span style={{ fontSize: "20px", marginLeft: "7px" }}>
@@ -58,7 +60,9 @@ function Footer() {
               </span>
             </ul>
           </Column>
-          <Column style={{ width: "100%", marginLeft: "450px",marginTop:'30px' }}>
+          <Column
+            style={{ width: "100%", marginLeft: "450px", marginTop: "30px" }}
+          >
             <Heading>Social Media</Heading>
             <FooterLink href="http://www.facebook.com" target="_blank">
               <i className="fab fa-facebook-f">
@@ -83,7 +87,7 @@ function Footer() {
           </Column>
         </Row>
       </Container>
-      <h3 style={{color: 'grey',marginTop:'10px', fontSize:'20px'}}>
+      <h3 style={{ color: "grey", marginTop: "10px", fontSize: "20px" }}>
         <footer>Copyright &copy; GO TRAIN 2021</footer>
       </h3>
     </Box>

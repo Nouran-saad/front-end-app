@@ -1,25 +1,28 @@
-//import React, { useEffect } from "react";
+// import react-bootstrap components
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
+// import axios to connect api
 import axios from "axios";
+// use hooks
 import { useHistory } from "react-router-dom";
-import { useState} from "react";
+import { useState } from "react";
+// import login style file
 import "./login.css";
 
 function Login() {
   const history = useHistory();
+  // use state hooks
   const [invalidUser, setInvalidUser] = useState(false);
   const [invalidPass, setInvalidPass] = useState(false);
 
-
-
+  // when click login
   const routeChange = (e) => {
-
     e.preventDefault();
     let request = {
       username: document.getElementById("username_input").value,
       password: document.getElementById("pass_input").value,
     };
+    // to verify user authentication
     axios
       .post("http://localhost:4000/login", request)
       .then((resp) => {

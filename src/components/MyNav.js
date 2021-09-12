@@ -1,15 +1,15 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo44 from './trainLogo.png'
+import logo44 from "./trainLogo.png";
 
-const myNav=(props)=> {
-
-  const {request,info}=props.user;
+const myNav = (props) => {
+  // to access the needed details
+  const { request, info } = props.user;
 
   return (
     <div>
-      <Card style={{ color: "white", height: "34px" ,width:'100%'}}>
+      <Card style={{ color: "white", height: "34px", width: "100%" }}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
@@ -24,7 +24,7 @@ const myNav=(props)=> {
                   }}
                   to={{
                     pathname: "/trains",
-                    state: { request,info},
+                    state: { request, info },
                   }}
                 >
                   Trains
@@ -41,7 +41,7 @@ const myNav=(props)=> {
                   }}
                   to={{
                     pathname: "/moreInfo",
-                    state: {request,info},
+                    state: { request, info },
                   }}
                 >
                   More Info
@@ -58,13 +58,17 @@ const myNav=(props)=> {
                   }}
                   to={{
                     pathname: "/profile",
-                    state: {  request,info},
+                    state: { request, info },
                   }}
                 >
                   Profile
                 </Link>
               </li>
-              <img src= {logo44} alt= 'logoooo' style = {{height: '50 px', width:"50px",marginLeft:'960px'}}/>
+              <img
+                src={logo44}
+                alt="logoooo"
+                style={{ height: "50 px", width: "50px", marginLeft: "960px" }}
+              />
               <li
                 className="nav-item"
                 style={{
@@ -77,13 +81,12 @@ const myNav=(props)=> {
               >
                 Go Train
               </li>
-              
             </ul>
           </div>
         </nav>
       </Card>
     </div>
   );
-}
+};
 
 export default myNav;

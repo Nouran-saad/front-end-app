@@ -1,17 +1,20 @@
 import React from "react";
-import "./ticket.css";
-import logo from "./qrcode.png";
 import { useLocation } from "react-router-dom";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
 import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+import "./ticket.css";
+
+import logo from "./qrcode.png";
+
 function Ticket() {
+  const history = useHistory();
   const { state } = useLocation();
   const { request, info, ticketInfo } = state;
   console.log(request, info);
-  const history = useHistory();
+
   const [isReturn, setIsReturn] = useState(true);
   const [temp, setTemp] = useState("");
   const [noOfTicketss] = useState(request.noOfTickets);
@@ -118,6 +121,7 @@ function Ticket() {
                                 {info.tripNoStart.train_no}
                               </h6>
                             </div>
+                            {/* if the user books more than one ticket the seats will besides each other*/}
                             <div className="col-sm-6">
                               <p className="m-b-10 f-w-600">Seat Number</p>
                               <h6 className="text-muted f-w-400">
@@ -183,6 +187,7 @@ function Ticket() {
                 </div>
               </div>
             </div>
+            {/* check if there is a return ticket to print */}
             {isReturn ? (
               <div className="padding">
                 <div className="row container d-flex justify-content-center">
@@ -335,7 +340,7 @@ function Ticket() {
           backgroundColor: "orange",
           marginTop: "60px",
           marginLeft: "20px",
-          marginBottom:'50px',
+          marginBottom: "50px",
           width: "200px",
         }}
       >

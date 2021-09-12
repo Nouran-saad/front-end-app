@@ -1,13 +1,16 @@
 import React from "react";
-import MyNav from "./MyNav";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Card } from "react-bootstrap";
+// import images to display
 import logo from "./roundedtrain.png";
 import logo1 from "./rounded2.png";
 import logo2 from "./rounded3.png";
+
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+// import nav bar and footer components
 import Footer from "./Footer";
+import MyNav from "./MyNav";
 
 function MoreInfo() {
   const [trips, setArrayTrips] = useState([]);
@@ -19,6 +22,7 @@ function MoreInfo() {
 
   useEffect(() => {
     function getData() {
+      // to get all trips available
       axios
         .post("http://localhost:4000/moreInfo")
         .then((resp) => {
@@ -35,12 +39,13 @@ function MoreInfo() {
   }, [isChanged]);
 
   return (
-    <div >
+    <div>
       <MyNav user={{ request, info }} />
       <h1 style={{ marginTop: "60px", marginLeft: "60px" }}>Trips Details</h1>
 
       {isChanged ? (
         <div>
+          {/* to loop on each trip*/}
           {trips.map((trip) => {
             var imgTemp = logo;
             if (trip.train_img === "roundedtrain") {
@@ -147,7 +152,7 @@ function MoreInfo() {
         <h1 style={{ marginLeft: "40px" }}>Loading</h1>
       )}
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }

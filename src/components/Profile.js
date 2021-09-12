@@ -1,21 +1,27 @@
 import React from "react";
+
 import { Table } from "react-bootstrap";
-import "./profile.css";
-import logo from "./qr.png";
 import { Card } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import logo44 from "./trainLogo.png";
-import axios from "axios";
 import { useEffect, useState } from "react";
+
+import "./profile.css";
+import logo from "./qr.png";
+import logo44 from "./trainLogo.png";
+
+import axios from "axios";
+
 import Footer from "./Footer";
 
 function Profile() {
   const location = useLocation();
   var { request, info } = location.state;
+
   const username = request.username;
   console.log(request);
   console.log(info);
+
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [isChanged, setIsChanged] = useState(false);
@@ -35,9 +41,10 @@ function Profile() {
           console.log(err);
         });
     }
-
+    // check whether the user is paid or not
     if (info.tripNoStart !== undefined) {
       setIsBooked(true);
+      // check if the ticket is going and coming
       if (info.tripNoReturn !== null) {
         setIsReturn(true);
       }
@@ -154,11 +161,11 @@ function Profile() {
           >
             Your Profile
           </h1>
-          <div className="row" style={{width:'500px'}}>
-            <div className="col-md-4" >
-              <img src={logo} alt="nouran" style={{marginLeft:'50px'}} />
+          <div className="row" style={{ width: "500px" }}>
+            <div className="col-md-4">
+              <img src={logo} alt="nouran" style={{ marginLeft: "50px" }} />
             </div>
-
+            {/* display the trip details if the user paid ticket/s */}
             <div className="col-md-4">
               {isBooked ? (
                 <Table
@@ -166,7 +173,11 @@ function Profile() {
                   bordered
                   hover
                   variant="light"
-                  style={{ marginTop: "1px",width:'1200px' , marginLeft:'150px'}}
+                  style={{
+                    marginTop: "1px",
+                    width: "1200px",
+                    marginLeft: "150px",
+                  }}
                 >
                   <thead>
                     <tr>
@@ -174,9 +185,9 @@ function Profile() {
                       <th>Trip Number</th>
                       <th>From</th>
                       <th>To</th>
-                      <th style={{minWidth:'100px'}}>Date</th>
+                      <th style={{ minWidth: "100px" }}>Date</th>
                       <th>Time</th>
-                      <th style={{minWidth:'130px'}}>No of tickets</th>
+                      <th style={{ minWidth: "130px" }}>No of tickets</th>
                       <th>Ticket Status</th>
                     </tr>
                   </thead>
@@ -207,7 +218,16 @@ function Profile() {
                   </tbody>
                 </Table>
               ) : (
-                <h2 style={{width:'400px',marginLeft:'300px',marginTop:'50px',color:'red'}}>You don't have any trips yet.</h2>
+                <h2
+                  style={{
+                    width: "400px",
+                    marginLeft: "300px",
+                    marginTop: "50px",
+                    color: "red",
+                  }}
+                >
+                  You don't have any trips yet.
+                </h2>
               )}
               <div />
               <div />
@@ -266,7 +286,7 @@ function Profile() {
                       </label>
                     </div>
                     <div className="col-md-6">
-                      <p style={{ marginRight: "180px", marginLeft: "68px" }}>
+                      <p style={{ marginRight: "180px", marginLeft: "68px",textAlign:'left' }}>
                         {phoneNo}
                       </p>
                     </div>
@@ -277,7 +297,7 @@ function Profile() {
           </div>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
