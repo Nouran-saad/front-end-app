@@ -19,6 +19,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        
         <Switch>
           {/*Non-protected routes*/}
           <Route exact path="/" component={Login} />
