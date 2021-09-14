@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { Card } from "react-bootstrap";
 // import images to display
 import logo from "../images/roundedtrain.png";
@@ -16,15 +15,12 @@ function MoreInfo() {
   const [trips, setArrayTrips] = useState([]);
   const [isChanged, setIsChanged] = useState(false);
 
-  const location = useLocation();
-  const { request, info } = location.state;
-  console.log(request);
 
   useEffect(() => {
     function getData() {
       // to get all trips available
       axios
-        .post("http://localhost:4000/moreInfo")
+        .get("http://localhost:4000/moreInfo")
         .then((resp) => {
           setArrayTrips(resp.data);
           console.log(trips);
@@ -40,7 +36,7 @@ function MoreInfo() {
 
   return (
     <div>
-      <MyNav user={{ request, info }} />
+      <MyNav/>
       <h1 style={{ marginTop: "60px", marginLeft: "60px" }}>Trips Details</h1>
 
       {isChanged ? (

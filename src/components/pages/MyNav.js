@@ -3,9 +3,7 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo44 from "../images/trainLogo.png";
 
-const myNav = (props) => {
-  // to access the needed details
-  const { request, info } = props.user;
+const myNav = () => {
 
   return (
     <div>
@@ -24,7 +22,7 @@ const myNav = (props) => {
                   }}
                   to={{
                     pathname: "/trains",
-                    state: { request, info },
+                    
                   }}
                 >
                   Trains
@@ -41,7 +39,6 @@ const myNav = (props) => {
                   }}
                   to={{
                     pathname: "/moreInfo",
-                    state: { request, info },
                   }}
                 >
                   More Info
@@ -58,7 +55,6 @@ const myNav = (props) => {
                   }}
                   to={{
                     pathname: "/profile",
-                    state: { request, info },
                   }}
                 >
                   Profile

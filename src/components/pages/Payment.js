@@ -1,15 +1,14 @@
 import React from "react";
 import "../styles/payment.css";
 import { useHistory } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Payment() {
   const history = useHistory();
 
-  const { state } = useLocation();
-  const { request, info } = state;
+  var request=JSON.parse(localStorage.getItem('userDetails'));
+  var info=JSON.parse(localStorage.getItem('tripInfo'));
   const [isReturn, setIsReturn] = useState(true);
   const [method, setMethod] = useState("paypal");
 
@@ -59,7 +58,8 @@ function Payment() {
           var ticketInfo = resp.data;
           console.log(resp.data);
           let path = "/ticket";
-          history.push(path, { request, info, ticketInfo });
+          localStorage.setItem('ticketInfo', JSON.stringify(ticketInfo));
+          history.push(path);
         })
         .catch((err) => {
           console.log(err);

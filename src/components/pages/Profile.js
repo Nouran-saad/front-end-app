@@ -2,7 +2,6 @@ import React from "react";
 
 import { Table } from "react-bootstrap";
 import { Card } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -15,11 +14,14 @@ import axios from "axios";
 import Footer from "./Footer";
 
 function Profile() {
-  const location = useLocation();
-  var { request, info } = location.state;
 
-  const username = request.username;
+
+  var request=JSON.parse(localStorage.getItem('userDetails'));
+  var info=JSON.parse(localStorage.getItem('tripInfo'));
+
   console.log(request);
+  const username = request.username;
+  console.log(JSON.parse(localStorage.getItem('ticketInfo')));
   console.log(info);
 
   const [email, setEmail] = useState("");
@@ -27,6 +29,7 @@ function Profile() {
   const [isChanged, setIsChanged] = useState(false);
   const [isBooked, setIsBooked] = useState(false);
   const [isReturn, setIsReturn] = useState(false);
+
 
   useEffect(() => {
     function getData() {

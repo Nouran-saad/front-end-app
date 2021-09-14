@@ -13,6 +13,7 @@ import Payment from "./components/pages/Payment";
 import MoreInfo from "./components/pages/MoreInfo";
 import Profile from "./components/pages/Profile";
 import Ticket from "./components/pages/Ticket";
+import Admin from "./components/pages/Admin";
 import ProtectedRouter from "./ProtectedRouter";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <ProtectedRouter exact path="/profile" component={Profile} />
           <ProtectedRouter exact path="/payment" component={Payment} />
           <ProtectedRouter exact path="/ticket" component={Ticket} />
+          <ProtectedRouter exact path="/admin" component={Admin} />
 
           {/*404 Page*/}
           <Route path="*">

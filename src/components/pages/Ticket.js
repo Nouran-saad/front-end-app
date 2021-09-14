@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+
 import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -11,8 +11,12 @@ import logo from "../images/qrcode.png";
 
 function Ticket() {
   const history = useHistory();
-  const { state } = useLocation();
-  const { request, info, ticketInfo } = state;
+
+  var request=JSON.parse(localStorage.getItem('userDetails'));
+  var info=JSON.parse(localStorage.getItem('tripInfo'));
+  var ticketInfo=JSON.parse(localStorage.getItem('ticketInfo'));
+
+
   console.log(request, info);
 
   const [isReturn, setIsReturn] = useState(true);
@@ -38,7 +42,7 @@ function Ticket() {
   }, []);
   const routeChange = () => {
     let path = "/trains";
-    history.push(path, { request, info });
+    history.push(path);
   };
 
   return (

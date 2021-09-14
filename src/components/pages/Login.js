@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 import axios from "axios";
 // use hooks
 import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState} from "react";
 // import login style file
 import "../styles/login.css";
 
@@ -14,7 +14,9 @@ function Login() {
   // use state hooks
   const [invalidUser, setInvalidUser] = useState(false);
   const [invalidPass, setInvalidPass] = useState(false);
+  localStorage.clear();
   localStorage.setItem("isAuthenticated","null");
+  
 
   // when click login
   const routeChange = (e) => {
@@ -23,18 +25,27 @@ function Login() {
       username: document.getElementById("username_input").value,
       password: document.getElementById("pass_input").value,
     };
+    
     // to verify user authentication
     axios
       .post("http://localhost:4000/login", request)
       .then((resp) => {
+
+        if (resp.data.message === "Admin") {
+          window.localStorage.setItem("isAuthenticated", "true");
+          let path = "/admin";
+          history.push(path);
+        }
+
         if (resp.data.message === "Successful login") {
           window.localStorage.setItem("isAuthenticated", "true");
           let path = "/trains";
           var request = {
             username: document.getElementById("username_input").value,
           };
-          var info = {};
-          history.push(path, { request, info });
+          localStorage.setItem('userDetails', JSON.stringify(request));
+          localStorage.setItem('tripInfo', JSON.stringify({}));
+          history.push(path);
         }
         if (resp.data.message === "User not found") {
           setInvalidUser(true);
@@ -48,6 +59,7 @@ function Login() {
       .catch((err) => {
         console.log(err);
       });
+      
   };
 
   return (

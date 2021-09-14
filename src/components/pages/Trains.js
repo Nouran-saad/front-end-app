@@ -3,7 +3,6 @@ import React from "react";
 
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
@@ -34,13 +33,6 @@ function Trains() {
   const [isNotAvailable, setIsNotAvailable] = useState(false);
 
   const history = useHistory();
-  const { state } = useLocation();
-  const { request, info } = state;
-  const username = request.username;
-  console.log(username);
-  console.log(request);
-  console.log(info);
-  //localStorage.setItem("request2",request);
 
 // return to login page
   const signOut=()=>{
@@ -118,7 +110,7 @@ function Trains() {
       }
 
       const request = {
-        username: username,
+        username: JSON.parse(localStorage.getItem('userDetails')).username,
         seat_no: 26,
         cart_number: 5,
         startDate: startDate,
@@ -135,11 +127,12 @@ function Trains() {
         .then((resp) => {
           var info = resp.data;
           console.log(info);
-// make sure that there are comptaible trips with the user requested details
-
+          // make sure that there are comptaible trips with the user requested details
           if (info.tripNoStart !== "no" && info.tripNoReturn !== "no") {
             let path = "/payment";
-            history.push(path, { request, info });
+            localStorage.setItem('userDetails', JSON.stringify(request));
+            localStorage.setItem('tripInfo', JSON.stringify(info));
+            history.push(path);
           }
           else{
             setIsNotAvailable(true);
@@ -168,7 +161,7 @@ function Trains() {
 
   return (
     <div>
-      <MyNav user={{ request, info }} />
+      <MyNav />
 
       <div
         style={{
