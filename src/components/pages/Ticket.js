@@ -12,12 +12,9 @@ import logo from "../images/qrcode.png";
 function Ticket() {
   const history = useHistory();
 
-  var request=JSON.parse(localStorage.getItem('userDetails'));
-  var info=JSON.parse(localStorage.getItem('tripInfo'));
-  var ticketInfo=JSON.parse(localStorage.getItem('ticketInfo'));
-
-
-  console.log(request, info);
+  var request = JSON.parse(localStorage.getItem("userDetails"));
+  var info = JSON.parse(localStorage.getItem("tripInfo"));
+  var ticketInfo = JSON.parse(localStorage.getItem("ticketInfo"));
 
   const [isReturn, setIsReturn] = useState(true);
   const [temp, setTemp] = useState("");

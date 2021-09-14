@@ -126,7 +126,7 @@ function Trains() {
         .post("http://localhost:4000/trains", request)
         .then((resp) => {
           var info = resp.data;
-          console.log(info);
+          
           // make sure that there are comptaible trips with the user requested details
           if (info.tripNoStart !== "no" && info.tripNoReturn !== "no") {
             let path = "/payment";

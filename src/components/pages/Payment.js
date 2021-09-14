@@ -7,13 +7,11 @@ import axios from "axios";
 function Payment() {
   const history = useHistory();
 
-  var request=JSON.parse(localStorage.getItem('userDetails'));
-  var info=JSON.parse(localStorage.getItem('tripInfo'));
+  var request = JSON.parse(localStorage.getItem("userDetails"));
+  var info = JSON.parse(localStorage.getItem("tripInfo"));
   const [isReturn, setIsReturn] = useState(true);
   const [method, setMethod] = useState("paypal");
 
-  console.log(request);
-  console.log(info);
   // tell what component need to do after rendering
   useEffect(() => {
     if (request.returnDate === null) {
@@ -56,9 +54,9 @@ function Payment() {
         .post("http://localhost:4000/payment", { paymentTemp, request, info })
         .then((resp) => {
           var ticketInfo = resp.data;
-          console.log(resp.data);
+
           let path = "/ticket";
-          localStorage.setItem('ticketInfo', JSON.stringify(ticketInfo));
+          localStorage.setItem("ticketInfo", JSON.stringify(ticketInfo));
           history.push(path);
         })
         .catch((err) => {

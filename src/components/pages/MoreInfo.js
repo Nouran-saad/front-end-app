@@ -15,7 +15,6 @@ function MoreInfo() {
   const [trips, setArrayTrips] = useState([]);
   const [isChanged, setIsChanged] = useState(false);
 
-
   useEffect(() => {
     function getData() {
       // to get all trips available
@@ -23,7 +22,7 @@ function MoreInfo() {
         .get("http://localhost:4000/moreInfo")
         .then((resp) => {
           setArrayTrips(resp.data);
-          console.log(trips);
+
           setIsChanged(true);
         })
         .catch((err) => {
@@ -36,7 +35,7 @@ function MoreInfo() {
 
   return (
     <div>
-      <MyNav/>
+      <MyNav />
       <h1 style={{ marginTop: "60px", marginLeft: "60px" }}>Trips Details</h1>
 
       {isChanged ? (

@@ -14,22 +14,16 @@ import axios from "axios";
 import Footer from "./Footer";
 
 function Profile() {
+  var request = JSON.parse(localStorage.getItem("userDetails"));
+  var info = JSON.parse(localStorage.getItem("tripInfo"));
 
-
-  var request=JSON.parse(localStorage.getItem('userDetails'));
-  var info=JSON.parse(localStorage.getItem('tripInfo'));
-
-  console.log(request);
   const username = request.username;
-  console.log(JSON.parse(localStorage.getItem('ticketInfo')));
-  console.log(info);
 
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [isChanged, setIsChanged] = useState(false);
   const [isBooked, setIsBooked] = useState(false);
   const [isReturn, setIsReturn] = useState(false);
-
 
   useEffect(() => {
     function getData() {
@@ -289,7 +283,13 @@ function Profile() {
                       </label>
                     </div>
                     <div className="col-md-6">
-                      <p style={{ marginRight: "180px", marginLeft: "68px",textAlign:'left' }}>
+                      <p
+                        style={{
+                          marginRight: "180px",
+                          marginLeft: "68px",
+                          textAlign: "left",
+                        }}
+                      >
                         {phoneNo}
                       </p>
                     </div>
