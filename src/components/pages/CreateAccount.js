@@ -96,23 +96,24 @@ function CreateAccount() {
   };
 
   return (
-    <div>
+    <div style={{height:'120vh'}}>
       <form
         onSubmit={(e) => {
           routeChange(e);
         }}
-        style={{ marginLeft: "480px" }}
+        style={{ marginLeft: "29vw" }}
       >
         <Card
           style={{
-            borderRadius: "40px",
+            borderRadius: "4vw",
             backgroundColor: "#e0e0eb",
-            marginTop: "30px",
-            width: "50%",
-            paddingRight: "100px",
-            paddingLeft: "100px",
-            paddingBottom: "50px",
-            marginBottom: "20px",
+            marginTop: "5vh",
+            width: "42vw",
+            paddingRight: "6vw",
+            paddingLeft: "6vw",
+            paddingBottom: "8vh",
+            marginBottom: "7vh",
+            height: '105vh'
           }}
         >
           <h2

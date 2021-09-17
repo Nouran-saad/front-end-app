@@ -62,7 +62,6 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/trains",
-                      state: { request, info },
                     }}
                     style={{
                       fontSize: "25px",
@@ -78,7 +77,6 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/moreInfo",
-                      state: { request, info },
                     }}
                     style={{
                       marginLeft: "10px",
@@ -95,7 +93,6 @@ function Profile() {
                     className="nav-link"
                     to={{
                       pathname: "/profile",
-                      state: { request, info },
                     }}
                     style={{
                       marginLeft: "10px",

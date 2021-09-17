@@ -68,17 +68,18 @@ function Login() {
         onSubmit={(e) => {
           routeChange(e);
         }}
-        style={{ marginLeft: "480px" }}
+        style={{ marginLeft: "31vw"  }}
       >
         <Card
           style={{
-            borderRadius: "40px",
+            borderRadius: "4vw",
             backgroundColor: "#e0e0eb",
-            marginTop: "80px",
-            width: "50%",
-            paddingRight: "100px",
-            paddingLeft: "100px",
-            paddingBottom: "100px",
+            marginTop: "10vh",
+            width: "38vw",
+            height: "75vh",
+            paddingRight: "5vw",
+            paddingLeft: "5vw",
+            paddingBottom: "30vh",
           }}
         >
           <h2
