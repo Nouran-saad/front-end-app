@@ -123,7 +123,7 @@ function Trains() {
       };
 
       axios
-        .post("http://localhost:4000/trains", request)
+        .post("https://testtbackend.herokuapp.com/trains", request)
         .then((resp) => {
           var info = resp.data;
           

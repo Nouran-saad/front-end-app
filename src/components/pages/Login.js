@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 import { useState} from "react";
 // import login style file
 import "../styles/login.css";
+const dotenv=require('dotenv').config();
 
 function Login() {
   const history = useHistory();
@@ -17,6 +18,7 @@ function Login() {
   localStorage.clear();
   localStorage.setItem("isAuthenticated","null");
   console.log(process.env.BACKENDURL)
+  console.log(process.env.PORT)
 
   // when click login
   const routeChange = (e) => {
@@ -28,7 +30,7 @@ function Login() {
     
     // to verify user authentication
     axios
-      .post(`${process.env.BACKENDURL}/login`, request)
+      .post(`https://testtbackend.herokuapp.com/login`, request)
       .then((resp) => {
 
         if (resp.data.message === "Admin") {

@@ -51,7 +51,7 @@ function Payment() {
     } else {
       // to save payment details and send it to ticket
       axios
-        .post("http://localhost:4000/payment", { paymentTemp, request, info })
+        .post("https://testtbackend.herokuapp.com/payment", { paymentTemp, request, info })
         .then((resp) => {
           var ticketInfo = resp.data;
 

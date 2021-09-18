@@ -19,7 +19,7 @@ function MoreInfo() {
     function getData() {
       // to get all trips available
       axios
-        .get("http://localhost:4000/moreInfo")
+        .get("https://testtbackend.herokuapp.com/moreInfo")
         .then((resp) => {
           setArrayTrips(resp.data);
 

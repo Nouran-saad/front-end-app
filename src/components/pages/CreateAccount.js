@@ -33,7 +33,7 @@ function CreateAccount() {
     };
     // post request to backend
     axios
-      .post("http://localhost:4000/create", request)
+      .post("https://testtbackend.herokuapp.com/create", request)
       .then((resp) => {
         if (resp.data.message === "User added") {
           // to go to login page

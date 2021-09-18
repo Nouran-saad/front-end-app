@@ -28,7 +28,7 @@ function Profile() {
   useEffect(() => {
     function getData() {
       axios
-        .post("http://localhost:4000/profile", { username })
+        .post("https://testtbackend.herokuapp.com/profile", { username })
         .then((resp) => {
           setEmail(resp.data.email);
           setPhoneNo(resp.data.phoneNo);
