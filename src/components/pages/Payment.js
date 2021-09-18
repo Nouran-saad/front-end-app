@@ -51,7 +51,7 @@ function Payment() {
     } else {
       // to save payment details and send it to ticket
       axios
-        .post("https://testtbackend.herokuapp.com/payment", { paymentTemp, request, info })
+        .post(`${process.env.REACT_APP_BACKENDURL}/payment`, { paymentTemp, request, info })
         .then((resp) => {
           var ticketInfo = resp.data;
 

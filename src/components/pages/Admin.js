@@ -36,7 +36,7 @@ function Admin() {
       Time: document.getElementById("time").value,
     };
     axios
-      .post("https://testtbackend.herokuapp.com/admin", request)
+      .post(`${process.env.REACT_APP_BACKENDURL}/admin`, request)
       .then((resp) => {
         // to make sure all data is filled
         if (resp.data.message === "Enter trip number") {

@@ -19,7 +19,7 @@ function MoreInfo() {
     function getData() {
       // to get all trips available
       axios
-        .get("https://testtbackend.herokuapp.com/moreInfo")
+        .get(`${process.env.REACT_APP_BACKENDURL}/moreInfo`)
         .then((resp) => {
           setArrayTrips(resp.data);
           setIsChanged(true);

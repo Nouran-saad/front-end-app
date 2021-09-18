@@ -123,7 +123,7 @@ function Trains() {
       };
 
       axios
-        .post("https://testtbackend.herokuapp.com/trains", request)
+        .post(`${process.env.REACT_APP_BACKENDURL}/trains`, request)
         .then((resp) => {
           var info = resp.data;
           

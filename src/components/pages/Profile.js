@@ -28,7 +28,7 @@ function Profile() {
   useEffect(() => {
     function getData() {
       axios
-        .post("https://testtbackend.herokuapp.com/profile", { username })
+        .post(`${process.env.REACT_APP_BACKENDURL}/profile`, { username })
         .then((resp) => {
           setEmail(resp.data.email);
           setPhoneNo(resp.data.phoneNo);
