@@ -22,7 +22,6 @@ function MoreInfo() {
         .get("https://testtbackend.herokuapp.com/moreInfo")
         .then((resp) => {
           setArrayTrips(resp.data);
-
           setIsChanged(true);
         })
         .catch((err) => {

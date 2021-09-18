@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import { useState} from "react";
 // import login style file
 import "../styles/login.css";
-const dotenv=require('dotenv').config();
 
 function Login() {
   const history = useHistory();
@@ -17,8 +16,6 @@ function Login() {
   const [invalidPass, setInvalidPass] = useState(false);
   localStorage.clear();
   localStorage.setItem("isAuthenticated","null");
-  console.log(process.env.BACKENDURL)
-  console.log(process.env.PORT)
 
   // when click login
   const routeChange = (e) => {
