@@ -18,7 +18,7 @@ import ProtectedRouter from "./ProtectedRouter";
 
 function App() {
 
- // console.log(process.env.REACT_APP_BACKENDURL);
+
   return (
     <Router>
       <div className="App">
