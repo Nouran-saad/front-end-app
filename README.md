@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Go Train
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This is train reservation website to create account, login, book a train, pay, print your ticket and see your profile with the ability to add a train and see all the available trips.
+&nbsp;
+## Table of Contents
 
-## Available Scripts
+* [Project Description](#project-description)
+* [Instructions](#instructions)
+* [Installation](#installation)
+* [Contribution](#contribution)
+* [License](#license)
+* [Available Links](#available-links)
 
-In the project directory, you can run:
+<!-- end of the list -->
+\
+&nbsp;
+## Project Description
 
-### `npm start`
+Here is the project description of our train reservation website. You can create account or login if you have already one, book your ticket by choosing if it will be one way or going and coming back then specify your destination and choose date,time and number of tickets needed. Then your ticket will be successfully booked , you can print it and see its details in your profile.Then you can pay using your visa .You can also check for more trips details in more info page if nedded.
+If you logged in as an admin you can add a new trip by filling the required info.
+\
+&nbsp;
+ 
+## Task
+Frontend that contains all our pages as create account, login, trains and payement linked with backend and by using get and post requests to get and send data to be saved in the database and then we deployed on heroku to be easily viewed.
+\
+&nbsp;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To see the results and test the website , you can run command npm start.
+\
+&nbsp;
 
-### `npm test`
+## Contribution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Authors: Mazen Mahmoud, Nouran Ahmed ,Maram Motaz
+\
+&nbsp;
 
-### `npm run build`
+## License
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+&copy; Go Train 2021
+\
+&nbsp;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Available Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ Github backend link: https://github.com/mazen-mahmoud16/Train-Reservation-Backend.git
+\
+&nbsp;
+Heroku link: https://go-train-website.herokuapp.com/
+\
+&nbsp;
+DB design: https://drive.google.com/file/d/1ZTIKdptjyN5r3Hz-vWe7fINjqzbKIuuu/view
+\
+&nbsp; 
+Adobe xd: https://xd.adobe.com/view/71c8ecde-cfd3-4b5b-ad4b-9879f1d5c5ba-249b/screen/99a2fdac-a784-49a8-8c03-564fd43c6ee1
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
